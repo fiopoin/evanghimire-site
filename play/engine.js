@@ -12,8 +12,20 @@
     ruby:    {name:'Ruby',    color:'#E53935', face:'👧🏼'},
     arjun:   {name:'Arjun',   color:'#EF6C00', face:'👦🏽'},
     orion:   {name:'Orion',   color:'#1E88E5', face:'👦🏻'},
-    dad:     {name:'Dad',     color:'#455A64', face:'👨🏽'}
+    dad:     {name:'Baba',    color:'#3A6EA5', face:'👨🏽'},
+    baba:    {name:'Baba',    color:'#3A6EA5'},
+    dallu:   {name:'Dallu',   color:'#8E1F2F'},
+    habba:   {name:'Habba',   color:'#6B4E2E'},
+    buwa:    {name:'Buwa',    color:'#1E2D4F'},
+    gaama:   {name:'Ghattekulo Aama', color:'#4E7A4E'},
+    maa:     {name:'Maa',     color:'#B8860B'},
+    papa:    {name:'Papa',    color:'#2B3F6B'},
+    kaka:    {name:'Kaka',    color:'#2F5A34'},
+    kaki:    {name:'Kaki',    color:'#B07F00'}
   };
+  /* Season 2 people: real cutouts, each wears a name patch */
+  const RATIO = {"arjun":0.3511,"baba":0.3533,"buwa":0.3289,"dallu":0.3344,"gaama":0.3344,"habba":0.4067,"kaka":0.5,"kaki":0.4022,"kestrel":0.3367,"maa":0.3356,"orion":0.4278,"papa":0.3344,"ruby":0.4947,"shivu":0.3144};
+  const HEIGHT = { baba:560, dallu:530, habba:520, buwa:525, gaama:500, maa:525, papa:560, kaka:555, kaki:535, shivu:480, orion:440, kestrel:375 };
 
   const S = { muted:false, ac:null, ep:null, token:0, auto:false, buffers:{} };
   const Abort = new Error('abort');
@@ -132,9 +144,10 @@
     const [e, [who, text]] = found;
     setBubble(who, text);
     stopVoice();
+    Object.keys(PEOPLE).forEach(k => talking(k, false)); talking(who, true);
     return new Promise(res => {
       let done = false, tm;
-      const fin = () => { if(done) return; done = true; clearTimeout(tm); setTimeout(res, 250); };
+      const fin = () => { if(done) return; done = true; clearTimeout(tm); talking(who, false); setTimeout(res, 250); };
       const readMs = text.length * 58 + 1200;
       const buf = S.buffers[e + '/' + key], a = S.ac;
       if(!S.muted && buf && a){
@@ -200,6 +213,38 @@
   function aamaHide(h){ $('aamaPos').style.display = h ? 'none' : ''; }
   function evanHide(h){ $('evanPos').style.display = h ? 'none' : ''; }
 
+  const PEOPLE = {};
+  function person(k, x, y, opts){
+    opts = opts || {};
+    let p = PEOPLE[k];
+    const h = Math.round((HEIGHT[k] || 500) * (opts.scale || 1)), w = Math.round(h * (RATIO[k] || .35));
+    if(!p){
+      const g = el('g', { id:'p_' + k, class:'person' }, $('people'));
+      g.innerHTML = '<g class="pwalk"><g class="ptalk"><ellipse cx="0" cy="0" rx="' + (w*.42) + '" ry="10" fill="#000" opacity=".13"/>' +
+        '<image href="cast/' + k + '.webp" x="' + (-w/2) + '" y="' + (-h) + '" width="' + w + '" height="' + h + '" filter="url(#shadowF)"' + (opts.flip ? ' transform="scale(-1 1)"' : '') + '/></g></g>';
+      p = PEOPLE[k] = { g, x, y, h, w };
+    }
+    p.g.style.transition = 'none'; p.g.style.transform = 'translate(' + x + 'px,' + y + 'px)'; p.g.style.display = ''; p.g.style.opacity = 1;
+    p.x = x; p.y = y;
+    if(opts.fade){ p.g.style.opacity = 0; requestAnimationFrame(() => { p.g.style.transition = 'opacity .6s'; p.g.style.opacity = 1; }); }
+    return p.g;
+  }
+  function personTo(k, x, y, ms){
+    const p = PEOPLE[k]; if(!p) return wait(0);
+    ms = ms == null ? 1200 : ms;
+    p.g.style.transition = 'transform ' + ms + 'ms linear';
+    p.g.style.transform = 'translate(' + x + 'px,' + y + 'px)'; p.x = x; p.y = y;
+    const wk = p.g.querySelector('.pwalk'); wk.classList.add('walking');
+    return wait(ms).finally(() => wk.classList.remove('walking'));
+  }
+  function personOut(k, ms){
+    const p = PEOPLE[k]; if(!p) return wait(0);
+    p.g.style.transition = 'opacity ' + (ms || 600) + 'ms'; p.g.style.opacity = 0;
+    return wait(ms || 600).then(() => { p.g.style.display = 'none'; });
+  }
+  function people(list, opts){ list.forEach(([k, x, y, o]) => person(k, x, y, Object.assign({}, opts || {}, o || {}))); }
+  function talking(who, on){ const p = PEOPLE[who]; if(p) p.g.querySelector('.ptalk').classList.toggle('talk', on); }
+
   /* scanning */
   let scanAnim = null;
   function scan(target){
@@ -252,6 +297,7 @@
   function targetBox(id){
     if(id === 'aama') return { cx:AA.x, cy:AA.y - 160, w:240, h:300 };
     if(id === 'evan') return { cx:EV.x, cy:EV.y - 215, w:200, h:420 };
+    if(id.startsWith('p_') && PEOPLE[id.slice(2)]){ const p = PEOPLE[id.slice(2)]; return { cx:p.x, cy:p.y - p.h*.55, w:p.w*.8, h:p.h*.7 }; }
     return bbox(node(id));
   }
   function startReprompt(key){
@@ -334,7 +380,7 @@
     S.token++;
     stopVoice(); clearHint(); scanOff(); loops.slice().forEach(h => h.stop()); timers.forEach(clearInterval); timers = [];
     clearInterval(reprompt); pending = null;
-    $('drops').innerHTML = ''; $('front').innerHTML = ''; $('scene').innerHTML = '';
+    $('drops').innerHTML = ''; $('front').innerHTML = ''; $('scene').innerHTML = ''; $('people').innerHTML = ''; Object.keys(PEOPLE).forEach(k => delete PEOPLE[k]);
     evanHold(null); evanLean(0); evanHide(false); aamaHide(false);
     $('evanWalk').className.baseVal = ''; $('evanJump').classList.remove('jump'); $('aamaSpin').classList.remove('wiggle');
     evanSet(200, 955); aamaSet(734, 945);
@@ -350,7 +396,7 @@
     $('menu').style.display = 'none';
     $('scene').innerHTML = e.scene();
     if(e.setup) e.setup(API);
-    $('startNum').textContent = 'Episode ' + n;
+    $('startNum').textContent = (e.season === 2 ? 'Season 2 · ' : 'Season 1 · ') + 'Episode ' + n;
     $('startTitle').textContent = e.title;
     show('start', true);
     if(auto){ ac(); begin(); }
@@ -379,7 +425,15 @@
     resetStage();
     $('menu').style.display = '';
     const g = $('grid'); g.innerHTML = '';
+    let lastSeason = 0;
     EPISODES.forEach(e => {
+      const sn = e.season || 1;
+      if(sn !== lastSeason){
+        lastSeason = sn;
+        const h = document.createElement('div'); h.className = 'season';
+        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : '<b>Season 2</b><span>The Trip to Nepal</span>';
+        g.appendChild(h);
+      }
       let done = false; try{ done = localStorage.getItem('ea_done_' + e.n) === '1'; }catch(err){}
       const b = document.createElement('button'); b.className = 'ep' + (done ? ' done' : '');
       b.innerHTML = '<div class="ico">' + e.icon + '</div><div class="num">Episode ' + e.n + (done ? ' ✓' : '') + '</div><div class="t">' + e.title + '</div><div class="s">' + e.setting + '</div>';
@@ -393,7 +447,7 @@
   }
 
   const API = { $, node, el, NS, svg, say, wait, anim, tap, choice, taps, scan, scanOff, evanTo, evanSet, evanLean, evanHold, evanHide,
-    aamaTo, aamaSet, aamaHide, cast, celebrate, sfx, loop, every, bbox, get EV(){ return EV; }, get AA(){ return AA; }, get auto(){ return S.auto; } };
+    aamaTo, aamaSet, aamaHide, cast, person, personTo, personOut, people, celebrate, sfx, loop, every, bbox, get EV(){ return EV; }, get AA(){ return AA; }, get auto(){ return S.auto; } };
 
   window.Game = {
     API,

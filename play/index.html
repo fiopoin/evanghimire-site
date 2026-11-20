@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Evan &amp; Aama: Season 1</title>
+<title>Evan &amp; Aama</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -51,6 +51,12 @@
   .ep .t{font-size:4.2cqw;font-weight:700;color:#24324A;line-height:1.15;margin-top:.4cqw}
   .ep .s{font-size:3cqw;color:#6A778C;margin-top:.6cqw}
   .ep.done{border-color:#2FBF71}
+  .season{grid-column:1/-1;display:flex;align-items:baseline;gap:2cqw;margin:2cqw 0 0;padding-bottom:1cqw;border-bottom:.5cqw solid #E9DFC9}
+  .season b{font-size:6cqw;color:#2F6FD6}.season span{font-size:3.8cqw;color:#5A6B82;font-weight:600}
+  .ptalk{transform-box:fill-box;transform-origin:50% 100%}
+  .ptalk.talk{animation:talk .55s ease-in-out infinite alternate}
+  @keyframes talk{to{transform:translateY(-6px) scaleY(1.01)}}
+  .pwalk.walking{animation:step .32s ease-in-out infinite alternate}
 
   #muteBtn,#homeBtn{position:absolute;bottom:2.5%;width:10cqw;height:10cqw;border-radius:50%;border:none;background:rgba(255,255,255,.92);z-index:3;
     font-size:5cqw;box-shadow:0 .6cqw 0 rgba(0,0,0,.15);cursor:pointer;padding:0}
@@ -102,6 +108,7 @@
   </defs>
   <g id="scene"></g>
   <g id="drops"></g>
+  <g id="people"></g>
   <g id="evanPos" style="transform:translate(200px,955px)">
     <g id="evanJump"><g id="evanWalk">
       <ellipse cx="0" cy="0" rx="80" ry="12" fill="#000" opacity=".12"/>
@@ -158,7 +165,7 @@
 <div id="menu">
   <div class="top">
     <img src="evan.webp" alt="Evan"><img src="aama.webp" alt="Aama" style="height:21cqw">
-    <div class="brand"><h1>Evan &amp; Aama</h1><p>Season 1 · Little hands can fix big things</p></div>
+    <div class="brand"><h1>Evan &amp; Aama</h1><p>Seasons 1 and 2 · Little hands can fix big things</p></div>
   </div>
   <div class="grid" id="grid"></div>
 </div>
@@ -168,6 +175,7 @@
 <script src="scene1.js"></script>
 <script src="engine.js"></script>
 <script src="episodes.js"></script>
+<script src="episodes2.js"></script>
 <script>Game.boot();</script>
 </body>
 </html>

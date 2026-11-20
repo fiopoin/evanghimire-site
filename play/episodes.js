@@ -276,12 +276,13 @@
       await E.aamaTo(700, 880);
       E.scan('bulb'); await E.say('a_scan'); E.scanOff();
       await E.say('e_fix');
-      E.cast(['dad']);
+      E.person('baba', 380, 862, { scale:.92, fade:true });
       E.node('bulbs').style.display = '';
       await E.choice(['bulbOld','bulbNew'], 'bulbNew', 'a_grownup');
       await moveTo(E, 'bulbNew', 75, -330, 1000);
       E.node('bulbNew').style.display = 'none';
       await E.say('dad_swap');
+      await E.personOut('baba');
       await E.evanTo(560, 955, 1100, true);
       await E.tap('switch', 'a_switch');
       E.evanLean(6); E.sfx.click();
@@ -566,5 +567,5 @@
     }
   });
 
-  window.EPISODES = EPISODES;
+  window.EPISODES = EPISODES; window.H = H;
 })();
