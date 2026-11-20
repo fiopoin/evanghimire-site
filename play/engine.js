@@ -429,6 +429,9 @@
     resetStage();
     S.ep = 'ep' + n; S.auto = !!auto; S.cur = e;
     $('muteBtn').style.display = $('homeBtn').style.display = $('pauseBtn').style.display = auto ? 'none' : '';
+    const hasNext = !!episode(n + 1);
+    $('skipBtn').style.display = (auto || !hasNext) ? 'none' : '';
+    $('pNextBtn').style.display = hasNext ? '' : 'none';
     $('menu').style.display = 'none';
     $('scene').innerHTML = e.scene();
     if(e.setup) e.setup(API);
@@ -495,6 +498,7 @@
       $('homeBtn').onclick = () => { location.hash = 'home'; };
       $('pauseBtn').onclick = () => setPaused(!PT.paused);
       $('resumeBtn').onclick = () => setPaused(false);
+      $('skipBtn').onclick = $('pNextBtn').onclick = () => { if(S.cur && episode(S.cur.n + 1)) location.hash = 'ep-' + (S.cur.n + 1); };
       document.addEventListener('keydown', ev => { if(ev.code === 'Space' && $('menu').style.display === 'none' && !S.auto){ ev.preventDefault(); setPaused(!PT.paused); } });
       document.addEventListener('visibilitychange', () => { if(document.hidden && !S.auto && $('menu').style.display === 'none') setPaused(true); });
       $('muteBtn').onclick = () => {
