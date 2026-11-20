@@ -458,7 +458,7 @@
       `<g id="sprayFx"></g>`,
     setup(E){ E.evanSet(150, 955); E.aamaSet(340, 560); },
     async run(E){
-      E.cast(['shivu']);
+      E.cast(['shivu','dallu']);
       await E.say('title');
       await E.say('s_dusty');
       await E.say('e_spray');

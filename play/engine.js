@@ -39,8 +39,8 @@
     kaki:    {name:'Kaki',    color:'#B07F00'}
   };
   /* Season 2 people: real cutouts, each wears a name patch */
-  const RATIO = {"arjun": 0.3511, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018};
-  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375 };
+  const RATIO = {"arjun": 0.3592, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018};
+  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375, ruby:415, arjun:405 };
 
   const S = { muted:false, ac:null, ep:null, token:0, auto:false, buffers:{} };
   const Abort = new Error('abort');
@@ -280,7 +280,10 @@
   /* friends present (shown as name chips until their photos are ready) */
   function cast(list){
     const c = $('chips'); c.innerHTML = '';
-    (list || []).forEach(k => {
+    const slots = [[72, 940], [858, 935]];
+    const real = (list || []).filter(k => RATIO[k]);
+    real.forEach((k, i) => person(k, slots[i][0], slots[i][1], { fade:true, scale: i ? .9 : 1 }));
+    (list || []).filter(k => !RATIO[k]).forEach(k => {
       const m = CAST[k]; if(!m) return;
       const d = document.createElement('div'); d.className = 'chip'; d.style.borderColor = m.color;
       d.innerHTML = '<span class="face">' + m.face + '</span>' + m.name;
