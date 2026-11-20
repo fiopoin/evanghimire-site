@@ -14,7 +14,7 @@
     orion:   {name:'Orion',   color:'#1E88E5', face:'👦🏻'},
     dad:     {name:'Baba',    color:'#3A6EA5', face:'👨🏽'},
     baba:    {name:'Baba',    color:'#3A6EA5'},
-    dallu:   {name:'Dallu',   color:'#8E1F2F'},
+    dallu:   {name:'Mom',     color:'#8E1F2F'},
     habba:   {name:'Habba',   color:'#6B4E2E'},
     buwa:    {name:'Buwa',    color:'#1E2D4F'},
     gaama:   {name:'Ghattekulo Aama', color:'#4E7A4E'},
@@ -24,7 +24,7 @@
     kaki:    {name:'Kaki',    color:'#B07F00'}
   };
   /* Season 2 people: real cutouts, each wears a name patch */
-  const RATIO = {"arjun":0.3511,"baba":0.3533,"buwa":0.3289,"dallu":0.3344,"gaama":0.3344,"habba":0.4067,"kaka":0.5,"kaki":0.4022,"kestrel":0.3367,"maa":0.3356,"orion":0.4278,"papa":0.3344,"ruby":0.4947,"shivu":0.3144};
+  const RATIO = {"arjun": 0.3511, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018};
   const HEIGHT = { baba:560, dallu:530, habba:520, buwa:525, gaama:500, maa:525, papa:560, kaka:555, kaki:535, shivu:480, orion:440, kestrel:375 };
 
   const S = { muted:false, ac:null, ep:null, token:0, auto:false, buffers:{} };
