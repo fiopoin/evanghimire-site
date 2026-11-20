@@ -1000,9 +1000,9 @@ window.LINES={
 "aama",
 "Evan and Aama! Episode eighteen. The cousins land!"
 ],
-"b_who": [
-"baba",
-"Who wants to pick up Orion and Kestrel at the airport?"
+"bu_who": [
+"buwa",
+"Who wants to come pick up Orion and Kestrel at the airport?"
 ],
 "e_me": [
 "evan",
@@ -1012,13 +1012,17 @@ window.LINES={
 "buwa",
 "Their plane from America is landing now."
 ],
+"g_tired": [
+"gaama",
+"They flew all night. They will be so tired and hungry!"
+],
 "a_hand": [
 "aama",
-"Evan, the airport is very busy. Hold Baba's hand. Tap Baba!"
+"Evan, the airport is very busy. Hold Habba's hand. Tap Habba!"
 ],
-"b_holding": [
-"baba",
-"Got you, buddy. Stay with me."
+"h_holding": [
+"habba",
+"I've got you, Evan. Stay with me."
 ],
 "k_here": [
 "kestrel",

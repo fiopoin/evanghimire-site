@@ -58,9 +58,10 @@
   @keyframes talk{to{transform:translateY(-6px) scaleY(1.01)}}
   .pwalk.walking{animation:step .32s ease-in-out infinite alternate}
 
-  #muteBtn,#homeBtn{position:absolute;bottom:2.5%;width:10cqw;height:10cqw;border-radius:50%;border:none;background:rgba(255,255,255,.92);z-index:3;
+  #muteBtn,#homeBtn,#pauseBtn{position:absolute;bottom:2.5%;width:10cqw;height:10cqw;border-radius:50%;border:none;background:rgba(255,255,255,.92);z-index:3;
     font-size:5cqw;box-shadow:0 .6cqw 0 rgba(0,0,0,.15);cursor:pointer;padding:0}
-  #muteBtn{left:2.5%} #homeBtn{left:14.5%}
+  #muteBtn{left:2.5%} #homeBtn{left:14.5%} #pauseBtn{left:26.5%}
+  #stage.paused #scene-svg{filter:saturate(.6) brightness(.9)}
 
   .blink{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
   @keyframes blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
@@ -140,6 +141,8 @@
 <div id="bubble" class="bubble hidden"><span class="who" id="who"></span><span id="line"></span></div>
 <button id="muteBtn" aria-label="Sound on or off">🔊</button>
 <button id="homeBtn" aria-label="All episodes">🏠</button>
+<button id="pauseBtn" aria-label="Pause">⏸</button>
+<div id="paused" class="overlay hidden"><div class="card"><h2 style="color:#2F6FD6;font-size:8cqw;margin:.2em 0 .5em">Paused</h2><button id="resumeBtn" class="big">▶ Keep going</button><div><button class="small" data-go="home">All episodes</button></div></div></div>
 
 <div id="start" class="overlay hidden">
   <div class="card">

@@ -1,6 +1,21 @@
 /* Evan & Aama game engine */
 (function(){
   const $ = id => document.getElementById(id);
+  /* pausable timers: every wait, line and tap timer in the game runs on this clock */
+  const PT = (() => {
+    const _st = window.setTimeout.bind(window), _ct = window.clearTimeout.bind(window);
+    let paused = false, seq = 0; const tm = new Map();
+    function arm(id){ const o = tm.get(id); o.start = performance.now(); o.h = _st(() => { tm.delete(id); o.fn(); }, o.left); }
+    return {
+      get paused(){ return paused; },
+      set(fn, ms){ const id = ++seq; tm.set(id, { fn, left: Math.max(0, +ms || 0) }); if(!paused) arm(id); return id; },
+      every(fn, ms){ const id = ++seq; const o = { left: ms }; o.fn = () => { tm.set(id, o); o.left = ms; if(!paused) arm(id); fn(); }; tm.set(id, o); if(!paused) arm(id); return id; },
+      clear(id){ const o = tm.get(id); if(o){ _ct(o.h); tm.delete(id); } },
+      pause(){ if(paused) return; paused = true; const now = performance.now(); tm.forEach(o => { _ct(o.h); o.left = Math.max(0, o.left - (now - o.start)); }); },
+      resume(){ if(!paused) return; paused = false; [...tm.keys()].forEach(arm); }
+    };
+  })();
+  const setTimeout = PT.set, clearTimeout = PT.clear, setInterval = PT.every, clearInterval = PT.clear;
   const NS = 'http://www.w3.org/2000/svg';
   const svg = $('scene-svg');
 
@@ -25,7 +40,7 @@
   };
   /* Season 2 people: real cutouts, each wears a name patch */
   const RATIO = {"arjun": 0.3511, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018};
-  const HEIGHT = { baba:560, dallu:530, habba:520, buwa:525, gaama:500, maa:525, papa:560, kaka:555, kaki:535, shivu:480, orion:440, kestrel:375 };
+  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375 };
 
   const S = { muted:false, ac:null, ep:null, token:0, auto:false, buffers:{} };
   const Abort = new Error('abort');
@@ -35,7 +50,7 @@
   function ac(){
     try{
       if(!S.ac){ const C = window.AudioContext || window.webkitAudioContext; if(C) S.ac = new C(); }
-      if(S.ac && S.ac.state === 'suspended') S.ac.resume();
+      if(S.ac && S.ac.state === 'suspended' && !PT.paused) S.ac.resume();
     }catch(e){}
     return S.ac;
   }
@@ -377,6 +392,7 @@
   /* ---------------- flow ---------------- */
   function show(id, on){ $(id).classList.toggle('hidden', !on); }
   function resetStage(){
+    setPaused(false);
     S.token++;
     stopVoice(); clearHint(); scanOff(); loops.slice().forEach(h => h.stop()); timers.forEach(clearInterval); timers = [];
     clearInterval(reprompt); pending = null;
@@ -387,12 +403,32 @@
     $('bubble').classList.add('hidden'); cast([]);
     show('end', false); show('start', false);
   }
+  let frozen = [];
+  function setPaused(on){
+    if(on === PT.paused) return;
+    if(on){
+      PT.pause();
+      frozen = document.getAnimations().filter(a => a.playState === 'running'); frozen.forEach(a => a.pause());
+      try{ if(S.ac) S.ac.suspend(); }catch(e){}
+      try{ speechSynthesis.pause(); }catch(e){}
+      $('stage').classList.add('paused');
+    } else {
+      $('stage').classList.remove('paused');
+      frozen.forEach(a => { try{ a.play(); }catch(e){} }); frozen = [];
+      try{ if(S.ac) S.ac.resume(); }catch(e){}
+      try{ speechSynthesis.resume(); }catch(e){}
+      PT.resume();
+    }
+    $('pauseBtn').textContent = on ? '▶' : '⏸';
+    $('pauseBtn').setAttribute('aria-label', on ? 'Play' : 'Pause');
+    show('paused', on);
+  }
   function episode(n){ return EPISODES.find(e => e.n === n); }
   function openEpisode(n, auto){
     const e = episode(n); if(!e){ goHome(); return; }
     resetStage();
     S.ep = 'ep' + n; S.auto = !!auto; S.cur = e;
-    $('muteBtn').style.display = $('homeBtn').style.display = auto ? 'none' : '';
+    $('muteBtn').style.display = $('homeBtn').style.display = $('pauseBtn').style.display = auto ? 'none' : '';
     $('menu').style.display = 'none';
     $('scene').innerHTML = e.scene();
     if(e.setup) e.setup(API);
@@ -457,6 +493,10 @@
       $('nextBtn').onclick = () => { location.hash = 'ep-' + (S.cur.n + 1); };
       document.querySelectorAll('[data-go="home"]').forEach(b => b.onclick = () => { location.hash = 'home'; });
       $('homeBtn').onclick = () => { location.hash = 'home'; };
+      $('pauseBtn').onclick = () => setPaused(!PT.paused);
+      $('resumeBtn').onclick = () => setPaused(false);
+      document.addEventListener('keydown', ev => { if(ev.code === 'Space' && $('menu').style.display === 'none' && !S.auto){ ev.preventDefault(); setPaused(!PT.paused); } });
+      document.addEventListener('visibilitychange', () => { if(document.hidden && !S.auto && $('menu').style.display === 'none') setPaused(true); });
       $('muteBtn').onclick = () => {
         S.muted = !S.muted; $('muteBtn').textContent = S.muted ? '🔇' : '🔊';
         loops.forEach(h => h.g.gain.value = S.muted ? 0 : h.vol);

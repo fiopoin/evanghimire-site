@@ -272,17 +272,18 @@
     scene: () => arrivals('Arrivals'),
     async run(E){
       E.aamaSet(810, 945); E.evanSet(170, 955);
-      E.people([['baba', 330, 905, {scale:.95}], ['buwa', 480, 900, {scale:.92}], ['habba', 620, 900, {scale:.92}]]);
+      E.people([['habba', 330, 905], ['buwa', 480, 905], ['gaama', 625, 905]]);
       await E.say('title');
-      await E.say('b_who');
+      await E.say('bu_who');
       await E.say('e_me');
       await E.say('bu_wait');
+      await E.say('g_tired');
       E.evanSet(200, 955);
-      await E.tap('p_baba', 'a_hand');
+      await E.tap('p_habba', 'a_hand');
       E.evanLean(5); E.sfx.bell();
-      await E.say('b_holding');
+      await E.say('h_holding');
       E.evanLean(0);
-      await Promise.all([E.personOut('buwa'), E.personOut('habba')]);
+      await Promise.all([E.personOut('buwa'), E.personOut('gaama')]);
       E.person('kestrel', 900, 930); E.person('orion', 980, 920);
       E.aamaTo(815, 540);
       await Promise.all([E.personTo('kestrel', 430, 930, 1400), E.personTo('orion', 535, 920, 1400)]);
