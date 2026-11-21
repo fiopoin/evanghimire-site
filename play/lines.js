@@ -1496,5 +1496,661 @@ window.LINES={
 "aama",
 "Travel tip! Roll clothes to fit more, and always say thank you."
 ]
+},
+"ep25": {
+"title": [
+"aama",
+"Evan and Aama! Season three, episode twenty five. Blast off!"
+],
+"e_button": [
+"evan",
+"Aama, what's that button on your charging pad? It says do not press."
+],
+"a_secret": [
+"aama",
+"Evan, that is my secret rocket button. Do you want to see space?"
+],
+"e_space": [
+"evan",
+"Space? Real space? Yes, yes, yes!"
+],
+"s_me": [
+"shivu",
+"Can I come too? I'll be your co-pilot!"
+],
+"d_go": [
+"dallu",
+"Go on, boys. Suits on! We'll watch you from Mission Control."
+],
+"e_go": [
+"evan",
+"Whoa! Let's go! Three, two, one..."
+],
+"e_uhoh": [
+"evan",
+"Uh oh. Aama, why won't it go?"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the rocket."
+],
+"a_scan": [
+"aama",
+"Beep boop! A rocket only launches when every step is done, in the right order. Our steps are all mixed up."
+],
+"a_first": [
+"aama",
+"What comes first? Tap the helmet!"
+],
+"a_second": [
+"aama",
+"Next, buckle up! Tap the seat belt!"
+],
+"a_third": [
+"aama",
+"Now close the hatch! Tap the door!"
+],
+"a_count": [
+"aama",
+"Last step, the countdown! Tap the big button!"
+],
+"all_count": [
+"shivu",
+"Ten, nine, eight, seven, six, five, four, three, two, one!"
+],
+"e_fly": [
+"evan",
+"We're flying! The houses are getting tiny!"
+],
+"e_marble": [
+"evan",
+"Aama, look! It's a big blue marble!"
+],
+"a_home": [
+"aama",
+"That is our home, Evan. Planet Earth."
+],
+"b_screen": [
+"baba",
+"We can see you, buddy! You look great up there."
+],
+"e_hi": [
+"evan",
+"Hi Baba! Hi Mom! I can see the whole world!"
+],
+"a_super": [
+"aama",
+"Super launching, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Earth is our home planet. From space it looks blue because most of it is ocean."
+]
+},
+"ep26": {
+"title": [
+"aama",
+"Evan and Aama! Episode twenty six. Moon footprints!"
+],
+"e_moon": [
+"evan",
+"We're on the Moon! Look, my boots make footprints!"
+],
+"a_air": [
+"aama",
+"The Moon has no air and no wind, Evan. Your footprints can stay here for a very long time."
+],
+"s_rover": [
+"shivu",
+"Evan, look! The little rover is stuck by that big crater."
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the rover."
+],
+"a_scan": [
+"aama",
+"Beep boop! The rover wants to drive into the crater. It needs a safe path around it."
+],
+"a_which": [
+"aama",
+"Which path goes around the craters? Tap the safe path!"
+],
+"e_drive": [
+"evan",
+"Go, little rover, go! Around and around!"
+],
+"s_safe": [
+"shivu",
+"It made it! Good driving, Evan!"
+],
+"a_super": [
+"aama",
+"Super driving, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! The Moon has no air, so astronauts wear spacesuits, and footprints stay for a very long time."
+]
+},
+"ep27": {
+"title": [
+"aama",
+"Evan and Aama! Episode twenty seven. Floating breakfast!"
+],
+"a_station": [
+"aama",
+"Welcome to the space station! Astronauts live and work here, high above Earth."
+],
+"e_float": [
+"evan",
+"Whee! I'm floating! Aama, I'm floating!"
+],
+"s_food": [
+"shivu",
+"Oh no, our breakfast is floating away! The apple, the tortilla, the juice!"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan."
+],
+"a_scan": [
+"aama",
+"Beep boop! In space everything floats. Let's put each food back in its own bowl."
+],
+"a_apple": [
+"aama",
+"Catch the apple! Tap it!"
+],
+"a_juice": [
+"aama",
+"Now the juice pouch! Tap it!"
+],
+"a_tort": [
+"aama",
+"And the tortilla! Tap it!"
+],
+"e_yum": [
+"evan",
+"Got them all! Breakfast is back!"
+],
+"s_tools": [
+"shivu",
+"Now let's clip our tools down so they don't float too."
+],
+"a_clip": [
+"aama",
+"Tap the wrench to clip it to the wall!"
+],
+"a_super": [
+"aama",
+"Super catching, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! In space things float, so astronauts strap down their tools and sleep in sleeping bags tied to the wall."
+]
+},
+"ep28": {
+"title": [
+"aama",
+"Evan and Aama! Episode twenty eight. Hot, hotter, hottest!"
+],
+"a_sun": [
+"aama",
+"Look, Evan, but never look at the real Sun without special glasses. The Sun is a giant ball of hot gas."
+],
+"e_hot": [
+"evan",
+"Aama, it's getting so hot in here!"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the ship."
+],
+"a_scan": [
+"aama",
+"Beep boop! Our sun shield is down. Tap the shield to raise it!"
+],
+"s_cool": [
+"shivu",
+"Phew. Much cooler now."
+],
+"a_order": [
+"aama",
+"Now, let's learn the planets near the Sun. Which planet is closest to the Sun? Tap Mercury, the little grey one!"
+],
+"a_second": [
+"aama",
+"Next comes Venus, the yellow cloudy one. Tap Venus!"
+],
+"a_third": [
+"aama",
+"And then our home, Earth! Tap Earth!"
+],
+"e_order": [
+"evan",
+"Mercury, Venus, Earth!"
+],
+"s_hottest": [
+"shivu",
+"So Mercury is the hottest, right? It's closest."
+],
+"a_venus": [
+"aama",
+"Good guess, Shivu! But Venus is the hottest. Its thick clouds trap the heat like a blanket."
+],
+"a_super": [
+"aama",
+"Super sorting, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! The Sun is a giant ball of hot gas. Mercury is closest to it, but Venus is the hottest planet."
+]
+},
+"ep29": {
+"title": [
+"aama",
+"Evan and Aama! Episode twenty nine. Red planet rover!"
+],
+"e_red": [
+"evan",
+"Everything is red! Aama, is this Mars?"
+],
+"a_mars": [
+"aama",
+"Yes, Evan! Mars is red because its dust has rust in it."
+],
+"s_rover": [
+"shivu",
+"This rover isn't moving. Its lights are off."
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the rover."
+],
+"a_scan": [
+"aama",
+"Beep boop! A dust storm covered its solar panels. Without sunlight, it has no power."
+],
+"a_wipe": [
+"aama",
+"Tap the panels to wipe the dust away!"
+],
+"e_wake": [
+"evan",
+"The lights are on! Hello, rover!"
+],
+"a_super": [
+"aama",
+"Super cleaning, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Mars is red because its dust has rust in it. Rovers there use sunlight for power."
+]
+},
+"ep30": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty. Asteroid maze!"
+],
+"s_rocks": [
+"shivu",
+"Whoa! Look at all those space rocks in front of us!"
+],
+"a_belt": [
+"aama",
+"Those are asteroids, Evan. Space rocks. We must steer through them."
+],
+"e_comet": [
+"evan",
+"Aama! What's that shiny thing with a long tail?"
+],
+"a_comet": [
+"aama",
+"That is a comet! A ball of ice and dust. When it comes near the Sun, it grows a glowing tail."
+],
+"a_steer1": [
+"aama",
+"Help Evan steer! Which way is clear? Tap the open path!"
+],
+"a_steer2": [
+"aama",
+"Good! And now? Tap the open path!"
+],
+"a_steer3": [
+"aama",
+"One more! Tap the open path!"
+],
+"e_through": [
+"evan",
+"We made it through! Shivu, did you see that?"
+],
+"s_yes": [
+"shivu",
+"That was the best driving ever!"
+],
+"a_super": [
+"aama",
+"Super steering, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Asteroids are space rocks. Comets are balls of ice and dust that grow a glowing tail near the Sun."
+]
+},
+"ep31": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty one. The giant storm!"
+],
+"e_big": [
+"evan",
+"Jupiter is so big! Let's land and play!"
+],
+"a_gas": [
+"aama",
+"We can't land, Evan. Jupiter is made mostly of gas. There is no ground to stand on."
+],
+"s_spot": [
+"shivu",
+"What's that big red circle?"
+],
+"a_spot": [
+"aama",
+"That is the Great Red Spot, a giant storm bigger than Earth!"
+],
+"e_stripes": [
+"evan",
+"Aama, the stripe picture on our screen is missing a piece!"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the pattern."
+],
+"a_scan": [
+"aama",
+"Beep boop! The stripes go orange, cream, orange, cream. What comes next? Tap the right color!"
+],
+"e_done": [
+"evan",
+"Orange! The pattern is finished!"
+],
+"a_super": [
+"aama",
+"Super pattern finding, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Jupiter is the biggest planet. It is made of gas, and its Great Red Spot is a storm bigger than Earth."
+]
+},
+"ep32": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty two. Rings of ice!"
+],
+"e_rings": [
+"evan",
+"Saturn has rings! They're so pretty!"
+],
+"a_rings": [
+"aama",
+"Saturn's rings are made of chunks of ice and rock. Some are tiny like sand, and some are big like a house."
+],
+"bump": [
+"shivu",
+"Bump! A ring piece hit our antenna. It's crooked!"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan."
+],
+"a_scan": [
+"aama",
+"Beep boop! Ring pieces are floating in our cargo bay. Let's sort them first. Tap the smallest piece!"
+],
+"a_mid": [
+"aama",
+"Now the middle piece!"
+],
+"a_big": [
+"aama",
+"And the biggest piece!"
+],
+"a_ant": [
+"aama",
+"Now tap the antenna to push it straight!"
+],
+"o_call": [
+"orion",
+"Evan! Shivu! Can you hear us? We're calling from Earth!"
+],
+"k_call": [
+"kestrel",
+"Did you see the rings? Are they sparkly?"
+],
+"e_call": [
+"evan",
+"So sparkly, Kestrel! I'll tell you everything!"
+],
+"a_super": [
+"aama",
+"Super sorting, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Saturn's rings are made of ice and rock, from tiny pieces to pieces as big as a house."
+]
+},
+"ep33": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty three. The sideways planet!"
+],
+"s_map": [
+"shivu",
+"Uh oh. The star map is mixed up. Which planet is which?"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the map."
+],
+"a_scan": [
+"aama",
+"Beep boop! Uranus spins on its side, like a rolling ball. Neptune is deep blue and very windy."
+],
+"a_uranus": [
+"aama",
+"Which one is Uranus? Tap the planet lying on its side!"
+],
+"a_neptune": [
+"aama",
+"Now which one is Neptune? Tap the deep blue windy one!"
+],
+"e_roll": [
+"evan",
+"Uranus is rolling like a ball! Hee hee!"
+],
+"s_wind": [
+"shivu",
+"And Neptune has the fastest winds of any planet."
+],
+"a_super": [
+"aama",
+"Super matching, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Uranus spins on its side. Neptune has the fastest winds of any planet."
+]
+},
+"ep34": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty four. Little Pluto!"
+],
+"e_small": [
+"evan",
+"This planet is so small! And cold!"
+],
+"a_dwarf": [
+"aama",
+"This is Pluto, Evan. It is a dwarf planet. Look, it has a big heart shape on it!"
+],
+"e_heart": [
+"evan",
+"A heart! Pluto loves us!"
+],
+"s_radio": [
+"shivu",
+"Mission Control? Hello? The radio is quiet."
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the radio."
+],
+"a_scan": [
+"aama",
+"Beep boop! Pluto is very far from home. The signal needs three bars. Tap three times to fill the bars!"
+],
+"count": [
+"evan",
+"One, two, three!"
+],
+"d_radio": [
+"dallu",
+"Evan? Shivu? We can hear you! You're so far away!"
+],
+"e_radio": [
+"evan",
+"Mom! We're at Pluto! It has a heart!"
+],
+"a_super": [
+"aama",
+"Super counting, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Pluto is a dwarf planet, far away and very cold, with a big heart shape on it."
+]
+},
+"ep35": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty five. Follow the stars!"
+],
+"a_home": [
+"aama",
+"Time to fly home, Evan."
+],
+"s_dark": [
+"shivu",
+"Uh oh. The map screen went dark!"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan."
+],
+"a_scan": [
+"aama",
+"Beep boop! We can find our way with the stars. Let's draw the Big Dipper. It looks like a big spoon."
+],
+"a_dots": [
+"aama",
+"Tap the stars one by one to connect the dots!"
+],
+"e_spoon": [
+"evan",
+"It's a giant spoon in the sky!"
+],
+"s_sun": [
+"shivu",
+"And our Sun is a star too, right?"
+],
+"a_sun": [
+"aama",
+"Yes, Shivu! The Sun is a star. It looks big because it is the closest star to us."
+],
+"a_super": [
+"aama",
+"Super star finding, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! The Sun is a star too. It looks big because it is the closest star to us."
+]
+},
+"ep36": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty six. Splashdown!"
+],
+"a_earth": [
+"aama",
+"There is Earth, Evan! We are going home."
+],
+"e_fast": [
+"evan",
+"We're going so fast! It's getting hot outside!"
+],
+"a_shield": [
+"aama",
+"That's okay, Evan. Our heat shield keeps us safe while Earth's air slows us down."
+],
+"a_tapme": [
+"aama",
+"Tap me, and I will scan the parachutes."
+],
+"a_scan": [
+"aama",
+"Beep boop! The parachutes open in order, from the smallest to the biggest. Tap the small one first!"
+],
+"a_mid": [
+"aama",
+"Now the middle one!"
+],
+"a_big": [
+"aama",
+"Now the big one!"
+],
+"e_splash": [
+"evan",
+"Splash! We're in the ocean!"
+],
+"d_welcome": [
+"dallu",
+"Evan! Shivu! Welcome home, my space explorers!"
+],
+"b_proud": [
+"baba",
+"So proud of you, buddy."
+],
+"h_shabash": [
+"habba",
+"Well done, Evan!"
+],
+"g_welcome": [
+"gaama",
+"Welcome home!"
+],
+"e_story": [
+"evan",
+"We saw the Moon and Mars and Saturn's rings and Pluto's heart!"
+],
+"s_next": [
+"shivu",
+"Where do we go next, Aama?"
+],
+"a_super": [
+"aama",
+"Super mission, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Space fact! Earth's air slows a space capsule down and makes it hot, so a heat shield keeps the astronauts safe."
+]
 }
 };

@@ -39,8 +39,8 @@
     kaki:    {name:'Kaki',    color:'#B07F00'}
   };
   /* Season 2 people: real cutouts, each wears a name patch */
-  const RATIO = {"arjun": 0.3592, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018};
-  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375, ruby:415, arjun:405 };
+  const RATIO = {"arjun": 0.3592, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018, "shivusp":0.4027};
+  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375, ruby:415, arjun:405, shivusp:540 };
 
   const S = { muted:false, ac:null, ep:null, token:0, auto:false, buffers:{} };
   const Abort = new Error('abort');
@@ -226,17 +226,23 @@
   }
   function aamaSet(x, y){ const p = $('aamaPos'); p.style.transition = 'none'; p.style.transform = 'translate(' + x + 'px,' + y + 'px)'; AA.x = x; AA.y = y; }
   function aamaHide(h){ $('aamaPos').style.display = h ? 'none' : ''; }
+  function evanSuit(on){
+    const im = $('evanImg');
+    if(on){ im.setAttribute('href','evan_space.webp'); im.setAttribute('x',-97); im.setAttribute('width',194); im.setAttribute('y',-430); im.setAttribute('height',430); }
+    else { im.setAttribute('href','evan.webp'); im.setAttribute('x',-172); im.setAttribute('width',344); im.setAttribute('y',-430); im.setAttribute('height',430); }
+  }
   function evanHide(h){ $('evanPos').style.display = h ? 'none' : ''; }
 
   const PEOPLE = {};
   function person(k, x, y, opts){
     opts = opts || {};
     let p = PEOPLE[k];
-    const h = Math.round((HEIGHT[k] || 500) * (opts.scale || 1)), w = Math.round(h * (RATIO[k] || .35));
+    const im = opts.img || k;
+    const h = Math.round((HEIGHT[im] || 500) * (opts.scale || 1)), w = Math.round(h * (RATIO[im] || .35));
     if(!p){
       const g = el('g', { id:'p_' + k, class:'person' }, $('people'));
       g.innerHTML = '<g class="pwalk"><g class="ptalk"><ellipse cx="0" cy="0" rx="' + (w*.42) + '" ry="10" fill="#000" opacity=".13"/>' +
-        '<image href="cast/' + k + '.webp" x="' + (-w/2) + '" y="' + (-h) + '" width="' + w + '" height="' + h + '" filter="url(#shadowF)"' + (opts.flip ? ' transform="scale(-1 1)"' : '') + '/></g></g>';
+        '<image href="cast/' + im + '.webp" x="' + (-w/2) + '" y="' + (-h) + '" width="' + w + '" height="' + h + '" filter="url(#shadowF)"' + (opts.flip ? ' transform="scale(-1 1)"' : '') + '/></g></g>';
       p = PEOPLE[k] = { g, x, y, h, w };
     }
     p.g.style.transition = 'none'; p.g.style.transform = 'translate(' + x + 'px,' + y + 'px)'; p.g.style.display = ''; p.g.style.opacity = 1;
@@ -257,6 +263,7 @@
     p.g.style.transition = 'opacity ' + (ms || 600) + 'ms'; p.g.style.opacity = 0;
     return wait(ms || 600).then(() => { p.g.style.display = 'none'; });
   }
+  function personDrop(k){ const p = PEOPLE[k]; if(p){ p.g.remove(); delete PEOPLE[k]; } }
   function people(list, opts){ list.forEach(([k, x, y, o]) => person(k, x, y, Object.assign({}, opts || {}, o || {}))); }
   function talking(who, on){ const p = PEOPLE[who]; if(p) p.g.querySelector('.ptalk').classList.toggle('talk', on); }
 
@@ -395,7 +402,7 @@
   /* ---------------- flow ---------------- */
   function show(id, on){ $(id).classList.toggle('hidden', !on); }
   function resetStage(){
-    setPaused(false);
+    setPaused(false); evanSuit(false);
     S.token++;
     stopVoice(); clearHint(); scanOff(); loops.slice().forEach(h => h.stop()); timers.forEach(clearInterval); timers = [];
     clearInterval(reprompt); pending = null;
@@ -438,7 +445,7 @@
     $('menu').style.display = 'none';
     $('scene').innerHTML = e.scene();
     if(e.setup) e.setup(API);
-    $('startNum').textContent = (e.season === 2 ? 'Season 2 · ' : 'Season 1 · ') + 'Episode ' + n;
+    $('startNum').textContent = ('Season ' + (e.season || 1) + ' · ') + 'Episode ' + n;
     $('startTitle').textContent = e.title;
     show('start', true);
     if(auto){ ac(); begin(); }
@@ -473,7 +480,7 @@
       if(sn !== lastSeason){
         lastSeason = sn;
         const h = document.createElement('div'); h.className = 'season';
-        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : '<b>Season 2</b><span>The Trip to Nepal</span>';
+        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : sn === 2 ? '<b>Season 2</b><span>The Trip to Nepal</span>' : '<b>Season 3</b><span>Mission to the Planets</span>';
         g.appendChild(h);
       }
       let done = false; try{ done = localStorage.getItem('ea_done_' + e.n) === '1'; }catch(err){}
@@ -489,7 +496,7 @@
   }
 
   const API = { $, node, el, NS, svg, say, wait, anim, tap, choice, taps, scan, scanOff, evanTo, evanSet, evanLean, evanHold, evanHide,
-    aamaTo, aamaSet, aamaHide, cast, person, personTo, personOut, people, celebrate, sfx, loop, every, bbox, get EV(){ return EV; }, get AA(){ return AA; }, get auto(){ return S.auto; } };
+    aamaTo, aamaSet, aamaHide, evanSuit, cast, person, personTo, personOut, personDrop, people, celebrate, sfx, loop, every, bbox, get EV(){ return EV; }, get AA(){ return AA; }, get auto(){ return S.auto; } };
 
   window.Game = {
     API,
