@@ -2152,5 +2152,821 @@ window.LINES={
 "aama",
 "Space fact! Earth's air slows a space capsule down and makes it hot, so a heat shield keeps the astronauts safe."
 ]
+},
+"ep37": {
+"title": [
+"aama",
+"Evan and Aama! Season four, episode thirty seven. The green bubbles!"
+],
+"e_moon": [
+"evan",
+"Frosty Moon! Everything is so icy and sparkly!"
+],
+"a_outpost": [
+"aama",
+"Welcome to the old outpost, Evan. Nobody has looked after it for a long, long time."
+],
+"s_stuffy": [
+"shivu",
+"Phew. The air in here feels stuffy."
+],
+"e_yellow": [
+"evan",
+"And look at the algae tanks. They're all pale and yellow. They look sick."
+],
+"a_know": [
+"aama",
+"Let's think like engineers. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Algae are tiny plants. Plants are alive. Plants need light, water and air!"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the tanks."
+],
+"a_scan": [
+"aama",
+"Beep boop! The water is here. The air is here. But the big lamp is broken."
+],
+"a_jars": [
+"aama",
+"Let's test it. One jar sits in the dark. One jar sits under a little lamp."
+],
+"a_which": [
+"aama",
+"Which jar is making bubbles? Tap it!"
+],
+"e_bubbles": [
+"evan",
+"The one in the light! It's making little bubbles!"
+],
+"a_light": [
+"aama",
+"Those bubbles are oxygen, the air we breathe. Plants make it when light shines on them."
+],
+"a_fix": [
+"aama",
+"Now let's fix the big lamp. Tap the lamp three times!"
+],
+"e_green": [
+"evan",
+"The tanks are turning green! Look at all the bubbles!"
+],
+"s_fresh": [
+"shivu",
+"And the air smells fresh now. Nice work, Evan."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Green plants use light, water and air to make the air we breathe."
+],
+"a_super": [
+"aama",
+"Super thinking, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Open a window when a room feels stuffy. Fresh air helps everyone feel better."
+]
+},
+"ep38": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty eight. Sour water!"
+],
+"e_one": [
+"evan",
+"Uh oh. One tank is turning yellow again."
+],
+"s_light": [
+"shivu",
+"But the lamp is on. So it's not the light this time."
+],
+"a_know": [
+"aama",
+"Good thinking. So what do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The light is good. So something is wrong with the water."
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the water."
+],
+"a_scan": [
+"aama",
+"Beep boop! We need a water test. A test strip changes color to tell us about the water."
+],
+"a_dip": [
+"aama",
+"Tap the test strip to dip it in the tank."
+],
+"e_orange": [
+"evan",
+"It turned orange!"
+],
+"a_sour": [
+"aama",
+"Orange means the water is too sour for the algae. Green means just right."
+],
+"e_taste": [
+"evan",
+"Should I taste it to check?"
+],
+"a_never": [
+"aama",
+"No, Evan! We never taste things in a lab. The test tells us, so our tongues don't have to."
+],
+"a_spoon": [
+"aama",
+"A tiny spoon of baking soda makes water less sour. Tap the spoon!"
+],
+"e_right": [
+"evan",
+"The strip is green! Just right! And the tank is bubbling again!"
+],
+"s_test": [
+"shivu",
+"Test, fix, then test again. That's how scientists do it."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Some water is sour and some is not. A test tells us. We never taste."
+],
+"a_super": [
+"aama",
+"Super testing, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Never taste anything from a lab or a cleaning cupboard. Grown-ups use tests to check, not tongues."
+]
+},
+"ep39": {
+"title": [
+"aama",
+"Evan and Aama! Episode thirty nine. Squeeze the pipe!"
+],
+"s_empty": [
+"shivu",
+"The new algae tank is empty. The pump is on, but look."
+],
+"e_drip": [
+"evan",
+"The water just dribbles out and falls on the floor. It can't reach the tank!"
+],
+"a_know": [
+"aama",
+"Hmm. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Water comes out of the pipe. But it's too slow to jump into the tank."
+],
+"e_thumb": [
+"evan",
+"Ooh! When Baba waters the garden, he puts his thumb on the hose and the water shoots far!"
+],
+"a_which": [
+"aama",
+"Yes! Which nozzle is like a thumb on the hose? Tap it!"
+],
+"e_whoosh": [
+"evan",
+"Whoosh! The water flies right into the tank!"
+],
+"c1": [
+"evan",
+"One!"
+],
+"c2": [
+"evan",
+"Two!"
+],
+"c3": [
+"evan",
+"Three! It's full!"
+],
+"s_full": [
+"shivu",
+"A smaller opening made the water go faster. Cool!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. When water squeezes through a narrow opening, it goes faster."
+],
+"a_super": [
+"aama",
+"Super squeezing, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Turn the tap off when you finish. Every drop of water is precious, on the Moon and at home."
+]
+},
+"ep40": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty. Share the power!"
+],
+"e_red": [
+"evan",
+"Aama, the power meter is red and beeping!"
+],
+"a_battery": [
+"aama",
+"Our old battery cannot run all four machines at once. It only has so much power."
+],
+"a_know": [
+"aama",
+"So, what do we know for sure?"
+],
+"e_truth": [
+"evan",
+"We need the air. We need the algae lamp. Those are the most important."
+],
+"a_off": [
+"aama",
+"Which machine does nobody need right now? Tap it to turn it off."
+],
+"e_still": [
+"evan",
+"The radio is off. But the meter is still a little bit red."
+],
+"a_blink": [
+"aama",
+"Here is a trick. The fence light doesn't need to stay on all the time. It can blink!"
+],
+"a_tapfence": [
+"aama",
+"Tap the fence light to make it blink."
+],
+"e_green": [
+"evan",
+"Blink, blink! And the meter is green!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Power is shared. Turning off what we don't need saves it for what matters."
+],
+"a_super": [
+"aama",
+"Super saving, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Never touch plugs or sockets. Electricity is a grown-up job."
+]
+},
+"ep41": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty one. The bending door!"
+],
+"e_noise": [
+"evan",
+"What was that creaky noise?"
+],
+"s_crack": [
+"shivu",
+"It's the airlock door. There's a crack, and it's growing!"
+],
+"a_know": [
+"aama",
+"Stay calm. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The crack gets longer at its pointy end."
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will scan the crack."
+],
+"a_scan": [
+"aama",
+"Beep boop! All the push is squeezing into the sharp tip of the crack. That's why it keeps growing."
+],
+"a_tip_tap": [
+"aama",
+"Find the very end of the crack. Tap the tip!"
+],
+"s_drill": [
+"shivu",
+"I'll drill a tiny round hole right there. Stand back, Evan."
+],
+"e_stopped": [
+"evan",
+"The crack stopped! The round hole spreads the push out!"
+],
+"a_hiss": [
+"aama",
+"Hear that little hiss? The door is still a tiny bit loose."
+],
+"a_vent": [
+"aama",
+"Warm metal grows a tiny bit bigger. Tap the warm air vent!"
+],
+"a_grow": [
+"aama",
+"The warm air makes the metal frame grow, so it hugs the door tight."
+],
+"e_quiet": [
+"evan",
+"No more hiss! The door is snug."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. A round hole stops a crack, and warm metal grows a tiny bit."
+],
+"a_super": [
+"aama",
+"Super fixing, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Drills and heaters are grown-up tools. Ask a grown-up to use them for you."
+]
+},
+"ep42": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty two. The number song!"
+],
+"e_beep": [
+"evan",
+"The old radio is beeping! It's showing numbers!"
+],
+"n0": [
+"evan",
+"One."
+],
+"n1": [
+"evan",
+"One."
+],
+"n2": [
+"evan",
+"Two."
+],
+"n3": [
+"evan",
+"Three."
+],
+"n4": [
+"evan",
+"Five."
+],
+"s_stop": [
+"shivu",
+"Then it stopped. What comes next?"
+],
+"a_know": [
+"aama",
+"Let's look closely. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The numbers get bigger. And they follow a pattern."
+],
+"a_add": [
+"aama",
+"Here's the secret. Add the two numbers before. One and one make two. One and two make three. Two and three make five."
+],
+"a_next": [
+"aama",
+"So three and five make what? Tap the next number!"
+],
+"e_eight": [
+"evan",
+"Eight! Three and five make eight!"
+],
+"a_after": [
+"aama",
+"And five and eight make? Tap it!"
+],
+"a_map": [
+"aama",
+"Thirteen! The radio is happy. It shows us a map to the Shattered Sea!"
+],
+"o_hi": [
+"orion",
+"Hi Evan! We saw your map on the radio!"
+],
+"k_come": [
+"kestrel",
+"We're coming to Frosty Moon too!"
+],
+"e_yes": [
+"evan",
+"Orion and Kestrel! Yay! Come quick!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. In this number song, each number is the two before it, added together."
+],
+"a_super": [
+"aama",
+"Super counting, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Ask a grown-up before you answer a message or a call from someone you don't know."
+]
+},
+"ep43": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty three. Sled bot, low and strong!"
+],
+"k_cold": [
+"kestrel",
+"Brrr! It's so cold here, Evan!"
+],
+"o_sea": [
+"orion",
+"The Shattered Sea is far away. How do we get there?"
+],
+"e_sled": [
+"evan",
+"We'll build a sled bot to carry our stuff!"
+],
+"s_snacks": [
+"shivu",
+"Kestrel and I will pack the snacks. You two build the sled!"
+],
+"o_tip": [
+"orion",
+"Oh no! The sled tipped over on the hill!"
+],
+"a_know": [
+"aama",
+"Let's think. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The heavy tanks are way up on top. Heavy things up high make it wobble."
+],
+"a_load": [
+"aama",
+"Which sled won't tip over? Tap it!"
+],
+"o_steady": [
+"orion",
+"Heavy tanks at the bottom. Now it's steady!"
+],
+"e_spin": [
+"evan",
+"But the wheels just spin. The hill is too steep."
+],
+"a_gear": [
+"aama",
+"Gears can help. A small gear turning a big gear is slow, but very strong. Which one should we use?"
+],
+"e_climb": [
+"evan",
+"It's climbing! Slow and strong, all the way up!"
+],
+"o_slow": [
+"orion",
+"Slow is okay if we get there!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Heavy things low stop tipping. A small gear turning a big gear is slow but strong."
+],
+"a_super": [
+"aama",
+"Super building, Evan and Orion! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Don't climb shelves. Heavy things go on low shelves so nothing tips over."
+]
+},
+"ep44": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty four. Where the lines cross!"
+],
+"k_fog": [
+"kestrel",
+"I can't see anything. It's all foggy!"
+],
+"e_where": [
+"evan",
+"The signal is in the fog somewhere. But where?"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"A beacon can point a line to the signal. But one line isn't enough."
+],
+"a_beacon1": [
+"aama",
+"Put the first beacon here. Tap the spot!"
+],
+"e_one": [
+"evan",
+"The first beacon points this way."
+],
+"a_beacon2": [
+"aama",
+"Now put the second beacon over there. Tap the spot!"
+],
+"k_two": [
+"kestrel",
+"Two lines!"
+],
+"a_cross": [
+"aama",
+"The signal is where the two lines cross. Tap that spot!"
+],
+"e_dome": [
+"evan",
+"The fog is lifting! It's a big glass dome!"
+],
+"k_sparkly": [
+"kestrel",
+"Ooh, it's sparkly!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Two lines from two places meet at one spot."
+],
+"a_super": [
+"aama",
+"Super finding, Evan and Kestrel! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! If you ever get lost, stay where you are and call for your grown-up."
+]
+},
+"ep45": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty five. Hello in light!"
+],
+"o_what": [
+"orion",
+"Evan, look! Something is glowing in the dome!"
+],
+"e_hello": [
+"evan",
+"Hello? Hello! Who's there?"
+],
+"a_shy": [
+"aama",
+"It's a friendly creature, but it's shy. It doesn't talk with words."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"It talks with its light! Like a firefly!"
+],
+"a_copy": [
+"aama",
+"It flashed two times. Let's say hello the same way!"
+],
+"a_torch": [
+"aama",
+"Tap the flashlight to flash it!"
+],
+"o_more": [
+"orion",
+"It flashed back! Let's show it some special counting numbers. Two, three, five!"
+],
+"n2": [
+"evan",
+"Flash it two times!"
+],
+"n3": [
+"evan",
+"Now three times!"
+],
+"n5": [
+"evan",
+"Now five times!"
+],
+"e_friend": [
+"evan",
+"It's coming out! It's glowing so bright!"
+],
+"a_glimmer": [
+"aama",
+"It's saying hello back. Let's call our new friend Glimmer."
+],
+"o_name": [
+"orion",
+"Hi, Glimmer!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Some living things make their own light, and patterns are a way to talk."
+],
+"a_super": [
+"aama",
+"Super talking, Evan and Orion! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Look at bugs and animals gently. Watch them, never grab them."
+]
+},
+"ep46": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty six. Too cold for rubber!"
+],
+"o_crack": [
+"orion",
+"Glimmer is flashing fast. Look! There's a crack in the dome!"
+],
+"a_cold": [
+"aama",
+"We need a patch. But it's very, very cold here."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"When it's really cold, water turns hard. Things act different in the cold."
+],
+"a_solid": [
+"aama",
+"Things can be solid, liquid or gas. Which one is solid? Tap it!"
+],
+"e_hard": [
+"evan",
+"Ice! Ice is solid and hard."
+],
+"a_test": [
+"aama",
+"Now let's test three patches in the cold."
+],
+"e_rubber": [
+"evan",
+"The rubber cracked! It got too hard in the cold!"
+],
+"a_which": [
+"aama",
+"Which patch stays soft and bendy in the cold? Tap it!"
+],
+"o_bendy": [
+"orion",
+"The slippery plastic patch fits perfectly!"
+],
+"e_happy": [
+"evan",
+"Glimmer is glowing happy again!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Things can be solid, liquid or gas, and cold makes some things crack."
+],
+"a_super": [
+"aama",
+"Super patching, Evan and Orion! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Stay away from very hot steam, and don't hold very cold ice packs on bare skin."
+]
+},
+"ep47": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty seven. Bouncy springs!"
+],
+"e_vault": [
+"evan",
+"There's the Seed Vault! Glimmer showed us the way."
+],
+"a_pods": [
+"aama",
+"These seed pods are for Earth's gardens. We must carry them gently."
+],
+"k_shake": [
+"kestrel",
+"The cart is shaking! The pods might crack!"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The ice is bumpy. Hard wheels feel every bump."
+],
+"a_which": [
+"aama",
+"Which wheels will soak up the bumps? Tap them!"
+],
+"k_knees": [
+"kestrel",
+"Springy wheels! Like when I bend my knees to jump!"
+],
+"a_drive": [
+"aama",
+"Tap the cart to drive it."
+],
+"e_safe": [
+"evan",
+"Bump, bump, bump. The pods are safe!"
+],
+"k_seeds": [
+"kestrel",
+"Yay! We saved the seeds!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Springs squash and stretch to soak up bumps, just like your knees."
+],
+"a_super": [
+"aama",
+"Super driving, Evan and Kestrel! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Bend your knees when you jump down, and only jump from low places."
+]
+},
+"ep48": {
+"title": [
+"aama",
+"Evan and Aama! Episode forty eight. Sail home on light!"
+],
+"e_home": [
+"evan",
+"We have the seeds. Time to go home!"
+],
+"a_fuel": [
+"aama",
+"But our ship is almost out of fuel."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The Sun is always shining. And light can push things!"
+],
+"a_open": [
+"aama",
+"Our ship has a big shiny sail. Tap it to open it!"
+],
+"k_shiny": [
+"kestrel",
+"Wow! It's so big and shiny!"
+],
+"a_push": [
+"aama",
+"Sunlight gives the sail a gentle push. In space, gentle pushes add up."
+],
+"e_go": [
+"evan",
+"We're sailing home on sunlight!"
+],
+"d_welcome": [
+"dallu",
+"Welcome home, my little space engineer! I missed you."
+],
+"h_seeds": [
+"habba",
+"Well done, Evan! Let's plant the seeds together."
+],
+"a_plant": [
+"aama",
+"Tap the soil to plant a seed!"
+],
+"e_grow": [
+"evan",
+"They're growing! Seeds from Frosty Moon, growing in our garden!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Light can push a thin sail, and seeds need soil, water and light to grow."
+],
+"a_super": [
+"aama",
+"Super sailing, Evan! You saved Frosty Moon and brought the seeds home! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Never look straight at the Sun, not even through glasses or a window."
+]
 }
 };

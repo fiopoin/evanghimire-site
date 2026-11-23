@@ -37,6 +37,9 @@
   .note{font-size:3.3cqw;color:#6A778C;margin:4cqw 0 0;line-height:1.3}
   .tip{background:#FFF6D6;border-radius:3cqw;padding:3cqw 3.5cqw;font-size:4.3cqw;color:#5A4A1A;margin:0 0 4cqw;text-align:left;line-height:1.3}
   .tip b{color:#E08A00}
+  .grown{background:#E8F1FF;border-radius:3cqw;padding:2cqw 3cqw;font-size:3.1cqw;color:#24406E;margin:-2cqw 0 3cqw;text-align:left;line-height:1.35}
+  .grown b{color:#2F6FD6}
+  .grown.hidden{display:none}
   .heroes{display:flex;justify-content:center;align-items:flex-end;gap:2cqw;margin:1cqw 0 2cqw}
 
   #menu{position:absolute;inset:0;z-index:6;background:linear-gradient(#FDF7EC,#EEF6F3);overflow-y:auto;-webkit-overflow-scrolling:touch}
@@ -161,6 +164,7 @@
     <div class="stars" style="font-size:9cqw;line-height:1">⭐⭐⭐</div>
     <h2 style="color:#2F6FD6;font-size:8cqw;margin:.25em 0 .5em">You fixed it!</h2>
     <div class="tip"><b>Fixer tip:</b> <span id="tipText"></span></div>
+    <div class="grown hidden" id="grownBox"><b>Grown-up corner:</b> <span id="grownText"></span></div>
     <button id="nextBtn" class="big">Next episode ▶</button>
     <div><button class="small" id="againBtn">🔁 Play again</button><button class="small" data-go="home">All episodes</button></div>
   </div>
@@ -169,18 +173,19 @@
 <div id="menu">
   <div class="top">
     <img src="evan.webp" alt="Evan"><img src="aama.webp" alt="Aama" style="height:21cqw">
-    <div class="brand"><h1>Evan &amp; Aama</h1><p>Seasons 1 and 2 · Little hands can fix big things</p></div>
+    <div class="brand"><h1>Evan &amp; Aama</h1><p>Little hands can fix big things</p></div>
   </div>
   <div class="grid" id="grid"></div>
 </div>
 </div>
 
-<script src="lines.js?v=1795301553"></script>
-<script src="scene1.js?v=1795301553"></script>
-<script src="engine.js?v=1795301553"></script>
-<script src="episodes.js?v=1795301553"></script>
-<script src="episodes2.js?v=1795301553"></script>
-<script src="episodes3.js?v=1795301553"></script>
+<script src="lines.js?v=1795478044"></script>
+<script src="scene1.js?v=1795478044"></script>
+<script src="engine.js?v=1795478044"></script>
+<script src="episodes.js?v=1795478044"></script>
+<script src="episodes2.js?v=1795478044"></script>
+<script src="episodes3.js?v=1795478044"></script>
+<script src="episodes4.js?v=1795478044"></script>
 <script>Game.boot();</script>
 </body>
 </html>

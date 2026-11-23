@@ -39,8 +39,8 @@
     kaki:    {name:'Kaki',    color:'#B07F00'}
   };
   /* Season 2 people: real cutouts, each wears a name patch */
-  const RATIO = {"arjun": 0.3592, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018, "shivusp":0.4027};
-  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375, ruby:415, arjun:405, shivusp:540 };
+  const RATIO = {"arjun": 0.3592, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018, "shivusp":0.4027, "orionsp":0.4488, "kestrelsp":0.4444};
+  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375, ruby:415, arjun:405, shivusp:540, orionsp:450, kestrelsp:385 };
 
   const S = { muted:false, ac:null, ep:null, token:0, auto:false, buffers:{} };
   const Abort = new Error('abort');
@@ -302,7 +302,7 @@
   let pending = null, reprompt = null;
   function clearHint(){ $('hint').style.display = 'none'; $('hintRings').innerHTML = ''; $('hintExtra').innerHTML = ''; $('hits').innerHTML = ''; }
   function ringFor(b){
-    return { cx:b.cx, cy:b.cy, rx:Math.max(b.w/2 + 18, 55), ry:Math.max(b.h/2 + 18, 50) };
+    return { cx:b.cx, cy:b.cy, rx:Math.max(b.w/2 + 12, 42), ry:Math.max(b.h/2 + 12, 40) };
   }
   function showRing(b, withHand){
     const r = ringFor(b);
@@ -463,6 +463,7 @@
       for(const k of (e.outro || ['a_super'])) await say(k);
       await wait(1400);
       $('tipText').textContent = e.tip;
+      $('grownText').textContent = e.grown || ''; $('grownBox').classList.toggle('hidden', !e.grown);
       $('nextBtn').style.display = episode(e.n + 1) ? '' : 'none';
       show('end', true);
       try{ localStorage.setItem('ea_done_' + e.n, '1'); }catch(err){}
@@ -480,7 +481,7 @@
       if(sn !== lastSeason){
         lastSeason = sn;
         const h = document.createElement('div'); h.className = 'season';
-        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : sn === 2 ? '<b>Season 2</b><span>The Trip to Nepal</span>' : '<b>Season 3</b><span>Mission to the Planets</span>';
+        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : sn === 2 ? '<b>Season 2</b><span>The Trip to Nepal</span>' : sn === 3 ? '<b>Season 3</b><span>Mission to the Planets</span>' : '<b>Season 4</b><span>Frosty Moon: First Principles</span>';
         g.appendChild(h);
       }
       let done = false; try{ done = localStorage.getItem('ea_done_' + e.n) === '1'; }catch(err){}
