@@ -36,11 +36,15 @@
     maa:     {name:'Maa',     color:'#B8860B'},
     papa:    {name:'Papa',    color:'#2B3F6B'},
     kaka:    {name:'Kaka',    color:'#2F5A34'},
-    kaki:    {name:'Kaki',    color:'#B07F00'}
+    kaki:    {name:'Kaki',    color:'#B07F00'},
+    fupu:    {name:'Fupu',    color:'#AD1457'},
+    fupa:    {name:'Fupa',    color:'#00695C'},
+    sanvi:   {name:'Sanvi',   color:'#3949AB'},
+    anvi:    {name:'Anvi',    color:'#7B1FA2'}
   };
   /* Season 2 people: real cutouts, each wears a name patch */
-  const RATIO = {"arjun": 0.3592, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018, "shivusp":0.4027, "orionsp":0.4488, "kestrelsp":0.4444};
-  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375, ruby:415, arjun:405, shivusp:540, orionsp:450, kestrelsp:385 };
+  const RATIO = {"arjun": 0.3592, "baba": 0.3175, "buwa": 0.3041, "dallu": 0.3066, "gaama": 0.3408, "habba": 0.3196, "kaka": 0.3078, "kaki": 0.2824, "kestrel": 0.4486, "maa": 0.284, "orion": 0.3038, "papa": 0.3049, "ruby": 0.4947, "shivu": 0.3018, "shivusp":0.4027, "orionsp":0.4488, "kestrelsp":0.4444, "fupu":0.2791, "fupa":0.3378, "sanvi":0.2922, "anvi":0.3014};
+  const HEIGHT = { baba:570, dallu:530, habba:540, buwa:575, gaama:505, maa:525, papa:570, kaka:570, kaki:535, shivu:480, orion:440, kestrel:375, ruby:415, arjun:405, shivusp:540, orionsp:450, kestrelsp:385, fupu:520, fupa:570, sanvi:495, anvi:440 };
 
   const S = { muted:false, ac:null, ep:null, token:0, auto:false, buffers:{} };
   const Abort = new Error('abort');
@@ -487,7 +491,7 @@
       if(sn !== lastSeason){
         lastSeason = sn;
         const h = document.createElement('div'); h.className = 'season';
-        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : sn === 2 ? '<b>Season 2</b><span>The Trip to Nepal</span>' : sn === 3 ? '<b>Season 3</b><span>Mission to the Planets</span>' : sn === 4 ? '<b>Season 4</b><span>Frosty Moon: First Principles</span>' : '<b>Season 5</b><span>Big Ideas</span>';
+        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : sn === 2 ? '<b>Season 2</b><span>The Trip to Nepal</span>' : sn === 3 ? '<b>Season 3</b><span>Mission to the Planets</span>' : sn === 4 ? '<b>Season 4</b><span>Frosty Moon: First Principles</span>' : sn === 5 ? '<b>Season 5</b><span>Big Ideas</span>' : '<b>Season 6</b><span>Cousin Week at the Lake</span>';
         g.appendChild(h);
       }
       let done = false; try{ done = localStorage.getItem('ea_done_' + e.n) === '1'; }catch(err){}

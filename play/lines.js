@@ -3628,5 +3628,697 @@ window.LINES={
 "aama",
 "Safety tip! Keep passwords secret, and share them only with your grown-up."
 ]
+},
+"ep61": {
+"title": [
+"aama",
+"Evan and Aama! Season six, episode sixty one. Lake house, here we come!"
+],
+"b_trunk": [
+"baba",
+"Everyone's ready for the lake. But the car trunk won't close!"
+],
+"e_gap": [
+"evan",
+"There's a tall skinny gap next to the bags."
+],
+"h_think": [
+"habba",
+"Think about the shape, Evan. What fits in that space?"
+],
+"e_truth": [
+"evan",
+"The gap is tall and thin. So I need a tall, thin bag!"
+],
+"b_which": [
+"baba",
+"Which bag fits the gap? Tap it!"
+],
+"b_fits": [
+"baba",
+"It fits! The trunk closes. Everybody buckle up!"
+],
+"fu_welcome": [
+"fupu",
+"Welcome to the lake house! We're so happy you're here."
+],
+"a_hi": [
+"aama",
+"Hello, Fupu! Hello, Fupa! Beep boop!"
+],
+"s_hi": [
+"sanvi",
+"Hi Evan! I brought my volleyball."
+],
+"fa_week": [
+"fupa",
+"A whole week of lake fun. Let's go, team!"
+],
+"e_yay": [
+"evan",
+"Cousin week! Yay!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. When you pack, match the shape to the space."
+],
+"a_super": [
+"aama",
+"Super packing, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Everyone buckles up in a car seat or seat belt, every trip, even short ones."
+]
+},
+"ep62": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty two. Fupu's first aid kit!"
+],
+"fu_doctor": [
+"fupu",
+"I'm a doctor, and every lake house needs a first aid kit. Want to help me check it?"
+],
+"e_box": [
+"evan",
+"It's a box with a big red cross!"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Different hurts need different helpers."
+],
+"fu_cut": [
+"fupu",
+"What helps a little cut? Tap it!"
+],
+"e_band": [
+"evan",
+"A bandage covers it and keeps it clean!"
+],
+"fu_bump": [
+"fupu",
+"What helps a bump on the head? Tap it!"
+],
+"e_cold": [
+"evan",
+"The cold pack! Cold makes the bump smaller."
+],
+"fu_sun": [
+"fupu",
+"And what stops a sunburn at the lake? Tap it!"
+],
+"fu_helper": [
+"fupu",
+"Sunscreen! You're a great first aid helper, Evan."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. A first aid kit has different helpers for different hurts."
+],
+"a_super": [
+"aama",
+"Super helping, Evan and Fupu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! If you get hurt, tell a grown-up right away. Even small hurts get looked at."
+]
+},
+"ep63": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty three. Life jackets on!"
+],
+"s_jackets": [
+"sanvi",
+"Before we go on the dock, everyone puts on a life jacket."
+],
+"e_why": [
+"evan",
+"Why? How does a jacket help?"
+],
+"a_know": [
+"aama",
+"Let's test it. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Some things sink, and some things float."
+],
+"a_drop": [
+"aama",
+"Tap the bucket to drop in a rock and a ball!"
+],
+"e_float": [
+"evan",
+"The rock sank. But the ball is floating!"
+],
+"a_air": [
+"aama",
+"The ball is full of air. Life jackets are full of tiny air bubbles too, so they float and hold you up."
+],
+"s_which": [
+"sanvi",
+"Life jackets must fit snug. Which one is your size? Tap it!"
+],
+"s_snug": [
+"sanvi",
+"The small one fits just right. Nice and snug!"
+],
+"e_ready": [
+"evan",
+"Now I'm ready for the dock!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Air floats, so a life jacket holds you up in the water."
+],
+"a_super": [
+"aama",
+"Super floating, Evan and Sanvi! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Always wear a life jacket near the lake, and only swim when a grown-up is watching."
+]
+},
+"ep64": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty four. Sand volleyball with Sanvi!"
+],
+"s_play": [
+"sanvi",
+"Want to play volleyball with me, Evan?"
+],
+"e_flat": [
+"evan",
+"Yes! But the ball is all squishy and flat. It won't bounce."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"A bouncy ball is round and full. This one is empty inside."
+],
+"a_which": [
+"aama",
+"What should we put inside the ball? Tap it!"
+],
+"a_pump": [
+"aama",
+"Tap the pump to push air in!"
+],
+"s_bounce": [
+"sanvi",
+"Boing! Squeezed air pushes back, so the ball bounces. Let's play!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Squeezed air pushes back, and that makes a ball bounce."
+],
+"a_super": [
+"aama",
+"Super pumping, Evan and Sanvi! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Drink water when you play in the sun, before you feel thirsty."
+]
+},
+"ep65": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty five. Oops, a scraped knee!"
+],
+"e_ouch": [
+"evan",
+"Ouch! I tripped and scraped my knee."
+],
+"fu_calm": [
+"fupu",
+"It's okay, Evan. Take a big breath. I'm right here."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"It's a little scrape. It's a bit dirty and it stings."
+],
+"fu_first": [
+"fupu",
+"First we clean it. What do we use? Tap it!"
+],
+"fu_rinse": [
+"fupu",
+"Clean water washes the dirt away."
+],
+"fu_second": [
+"fupu",
+"Next we pat it dry. Tap it!"
+],
+"fu_pat": [
+"fupu",
+"Soft gauze, gentle pats."
+],
+"fu_third": [
+"fupu",
+"Last, we cover it up. Tap it!"
+],
+"e_better": [
+"evan",
+"That feels much better. Thank you, Fupu!"
+],
+"fu_heal": [
+"fupu",
+"Your body will grow new skin under there. Bodies are amazing at healing."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Clean it, dry it, cover it, and tell a grown-up."
+],
+"a_super": [
+"aama",
+"Super brave, Evan! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Tell a grown-up whenever you get hurt, even if it's small."
+]
+},
+"ep66": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty six. Fupa's dock workout!"
+],
+"fa_workout": [
+"fupa",
+"Morning workout on the dock! Who's with me?"
+],
+"e_ready": [
+"evan",
+"Me! I want strong muscles like Fupa!"
+],
+"a_know": [
+"aama",
+"Let's listen to your heart. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"My heart goes thump, thump, all the time!"
+],
+"a_slow": [
+"aama",
+"Right now it beats slow and calm."
+],
+"fa_jump": [
+"fupa",
+"Tap the jump button. Jump, Evan, jump!"
+],
+"e_fast": [
+"evan",
+"Now my heart is going so fast!"
+],
+"a_muscles": [
+"aama",
+"Your muscles need more air when you move, so your heart pumps faster to bring it."
+],
+"fa_drink": [
+"fupa",
+"Great workout! What should we drink? Tap it!"
+],
+"fa_rep": [
+"fupa",
+"Water! One more rep for you, champ!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Exercise makes your heart beat faster, and water helps your body cool down."
+],
+"a_super": [
+"aama",
+"Super jumping, Evan and Fupa! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Warm up first, drink water, and stop and tell a grown-up if you feel dizzy."
+]
+},
+"ep67": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty seven. Anvi's block world!"
+],
+"an_level": [
+"anvi",
+"Evan! I turned the lake into a game level. Get the boat to the treasure!"
+],
+"e_how": [
+"evan",
+"How do I move the boat?"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The boat is at the bottom. The treasure is at the top, on the other side."
+],
+"an_rules": [
+"anvi",
+"The boat follows arrow cards, one step at a time. And it can't sail on the green islands!"
+],
+"an_which": [
+"anvi",
+"Which arrow cards get the boat to the treasure? Tap them!"
+],
+"an_go": [
+"anvi",
+"Tap the boat to start the code!"
+],
+"an_win": [
+"anvi",
+"Level complete! Plus one hundred points!"
+],
+"e_code": [
+"evan",
+"I wrote my first code!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Code is steps in the right order, and the computer follows them exactly."
+],
+"a_super": [
+"aama",
+"Super coding, Evan and Anvi! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Take breaks from screens, and play outside too."
+]
+},
+"ep68": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty eight. Sunny day!"
+],
+"s_shadow": [
+"sanvi",
+"Look, Evan. The post has a shadow."
+],
+"e_sun": [
+"evan",
+"And the Sun is over there, on the other side!"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The shadow is on the side away from the Sun."
+],
+"a_move": [
+"aama",
+"Later in the day, the Sun moves to the other side of the sky."
+],
+"a_where": [
+"aama",
+"Where will the shadow go? Tap the spot!"
+],
+"e_other": [
+"evan",
+"The shadow moved! It's always away from the Sun."
+],
+"s_protect": [
+"sanvi",
+"Sun is fun, but it can burn our skin. What protects us? Tap it!"
+],
+"s_hat": [
+"sanvi",
+"Sunscreen! And a hat, and some shade at lunchtime."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Shadows point away from the Sun, and sunscreen keeps our skin safe."
+],
+"a_super": [
+"aama",
+"Super shadow spotting, Evan and Sanvi! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Wear sunscreen and a hat, and find shade in the middle of the day."
+]
+},
+"ep69": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty nine. The leaky kayak!"
+],
+"fa_kayak": [
+"fupa",
+"Kayak time! Hmm. Why is there water inside it?"
+],
+"e_wet": [
+"evan",
+"Water is getting in from somewhere!"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Water only gets in through a hole."
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, and I will find the hole."
+],
+"a_scan": [
+"aama",
+"Beep boop! There's a little hole at the bottom. Water pushes in through it."
+],
+"fa_which": [
+"fupa",
+"Which patch will keep the water out? Tap it!"
+],
+"fa_sponge": [
+"fupa",
+"Sealed tight! Now let's sponge out the water."
+],
+"fa_tapwater": [
+"fupa",
+"Tap the water to sponge it out!"
+],
+"e_dry": [
+"evan",
+"The kayak is dry, and no more water is coming in!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Water finds any hole, so a waterproof patch keeps a boat dry."
+],
+"a_super": [
+"aama",
+"Super fixing, Evan and Fupa! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Check boats with a grown-up before going on the water, and always wear your life jacket."
+]
+},
+"ep70": {
+"title": [
+"aama",
+"Evan and Aama! Episode seventy. Buzzing bee!"
+],
+"e_bee": [
+"evan",
+"A bee! It's buzzing around Fupu's flowers."
+],
+"e_ouch": [
+"evan",
+"Ouch! It stung my hand!"
+],
+"fu_calm": [
+"fupu",
+"Stay calm, Evan. I'll help you. I'm a doctor."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The bee left a tiny stinger in my hand. It needs to come out."
+],
+"fu_how": [
+"fupu",
+"What's the best way to get the stinger out? Tap it!"
+],
+"fu_cold": [
+"fupu",
+"We scrape it out sideways with a flat card. Then a cold pack for the sting."
+],
+"e_better": [
+"evan",
+"The cold feels good. It doesn't hurt so much now."
+],
+"fu_pollen": [
+"fupu",
+"Bees aren't mean. They carry pollen from flower to flower, so the flowers can make seeds."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Stay calm around bees, and if one stings, get the stinger out and tell a grown-up."
+],
+"a_super": [
+"aama",
+"Super brave, Evan and Fupu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Stay calm and still near bees. If you get stung, tell a grown-up right away."
+]
+},
+"ep71": {
+"title": [
+"aama",
+"Evan and Aama! Episode seventy one. Campfire s'mores!"
+],
+"s_smores": [
+"sanvi",
+"Fupa made a campfire. Time for s'mores!"
+],
+"e_close": [
+"evan",
+"I want to get really close to see!"
+],
+"a_know": [
+"aama",
+"Wait, Evan. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Fire is very hot. Even the air near it is hot."
+],
+"a_where": [
+"aama",
+"Where is the safe place to sit? Tap it!"
+],
+"s_good": [
+"sanvi",
+"A big step back. Good choice!"
+],
+"s_stick": [
+"sanvi",
+"Which roasting stick keeps your hands far from the fire? Tap it!"
+],
+"e_gold": [
+"evan",
+"Look! My marshmallow is turning golden brown!"
+],
+"s_yum": [
+"sanvi",
+"Heat melts the sugar and turns it brown. Yum!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Fire is hot, so we stay a big step back and use a long stick."
+],
+"a_super": [
+"aama",
+"Super roasting, Evan and Sanvi! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Stay a big step back from fires. Only grown-ups light a fire or put it out."
+]
+},
+"ep72": {
+"title": [
+"aama",
+"Evan and Aama! Episode seventy two. The cousin cup!"
+],
+"a_tied": [
+"aama",
+"The cousin cup! It's nine to nine. The next point wins!"
+],
+"s_pass": [
+"sanvi",
+"Evan, we win as a team. Pass to me, and I'll set it up for you!"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"One player alone can't win. Teammates help each other."
+],
+"a_tapsanvi": [
+"aama",
+"Tap Sanvi to pass her the ball!"
+],
+"s_set": [
+"sanvi",
+"I set it up high. Now hit it, Evan!"
+],
+"a_hit": [
+"aama",
+"Tap the ball to hit it over the net!"
+],
+"e_won": [
+"evan",
+"We won! Ten to nine!"
+],
+"an_cup": [
+"anvi",
+"Good game, everybody! Team hug!"
+],
+"d_stars": [
+"dallu",
+"Look up, everyone. The stars are out over the lake."
+],
+"a_look": [
+"aama",
+"Tap the telescope to look at the Moon!"
+],
+"e_moon": [
+"evan",
+"I can see the Moon's craters!"
+],
+"h_family": [
+"habba",
+"The best part of the week is all of us together."
+],
+"e_best": [
+"evan",
+"Best cousin week ever!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Teams win together, and family makes everything more fun."
+],
+"a_super": [
+"aama",
+"Super teamwork, everyone! See you next time! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Never look at the Sun through a telescope or binoculars."
+]
 }
 };
