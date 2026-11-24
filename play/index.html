@@ -9,8 +9,20 @@
 <style>
   html,body{margin:0;height:100%;background:#F6F0E5;font-family:'Fredoka',system-ui,-apple-system,sans-serif}
   body{display:flex;align-items:center;justify-content:center;overflow:hidden;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
-  .stage{position:relative;width:min(100vw,90vh);aspect-ratio:9/10;container-type:inline-size;overflow:hidden;background:#F6F0E5}
-  @supports (height:100dvh){.stage{width:min(100vw,calc(100dvh * .9))}}
+  :root{--b:clamp(48px,6vmin,72px)}
+  .wrap{display:flex;align-items:center;justify-content:center;gap:10px;flex-direction:column}
+  .stage{position:relative;width:min(100vw,calc((100vh - var(--b) - 20px) * .9));aspect-ratio:9/10;container-type:inline-size;overflow:hidden;background:#F6F0E5}
+  @supports (height:100dvh){.stage{width:min(100vw,calc((100dvh - var(--b) - 20px) * .9))}}
+  #ctrls{display:flex;flex-direction:row;gap:14px;align-items:center;justify-content:center;height:calc(var(--b) + 6px)}
+  #ctrls.off{visibility:hidden}
+  body.auto #ctrls{display:none}
+  body.auto .stage{width:min(100vw,90vh)!important}
+  @media (min-aspect-ratio:1/1){
+    .wrap{flex-direction:row}
+    .stage{width:min(calc(100vw - var(--b) - 24px),90vh)}
+    @supports (height:100dvh){.stage{width:min(calc(100vw - var(--b) - 24px),90dvh)}}
+    #ctrls{flex-direction:column;order:-1;height:auto;width:calc(var(--b) + 6px)}
+  }
   svg#scene-svg{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:manipulation}
 
   .bubble{position:absolute;top:2.2%;left:4%;right:4%;background:#fff;border-radius:5cqw;padding:2.2cqw 3.4cqw;z-index:3;
@@ -40,6 +52,13 @@
   .grown{background:#E8F1FF;border-radius:3cqw;padding:2cqw 3cqw;font-size:3.1cqw;color:#24406E;margin:-2cqw 0 3cqw;text-align:left;line-height:1.35}
   .grown b{color:#2F6FD6}
   .grown.hidden{display:none}
+  #end .card{max-height:96%;overflow-y:auto;box-sizing:border-box}
+  #end.hasGrown .card{padding:3.5cqw 5cqw}
+  #end.hasGrown .stars{font-size:7cqw!important}
+  #end.hasGrown h2{font-size:6.6cqw!important;margin:.15em 0 .35em!important}
+  #end.hasGrown .tip{font-size:3.6cqw;padding:2cqw 3cqw;margin-bottom:2.5cqw}
+  #end.hasGrown .big{font-size:5.4cqw;padding:1.8cqw 6cqw}
+  #end.hasGrown .small{margin-top:2cqw}
   .heroes{display:flex;justify-content:center;align-items:flex-end;gap:2cqw;margin:1cqw 0 2cqw}
 
   #menu{position:absolute;inset:0;z-index:6;background:linear-gradient(#FDF7EC,#EEF6F3);overflow-y:auto;-webkit-overflow-scrolling:touch}
@@ -61,9 +80,8 @@
   @keyframes talk{to{transform:translateY(-6px) scaleY(1.01)}}
   .pwalk.walking{animation:step .32s ease-in-out infinite alternate}
 
-  #muteBtn,#homeBtn,#pauseBtn,#skipBtn{position:absolute;bottom:2.5%;width:10cqw;height:10cqw;border-radius:50%;border:none;background:rgba(255,255,255,.92);z-index:3;
-    font-size:5cqw;box-shadow:0 .6cqw 0 rgba(0,0,0,.15);cursor:pointer;padding:0}
-  #muteBtn{left:2.5%} #homeBtn{left:14.5%} #pauseBtn{left:26.5%} #skipBtn{left:38.5%}
+  #muteBtn,#homeBtn,#pauseBtn,#skipBtn{width:var(--b);height:var(--b);flex:0 0 var(--b);border-radius:50%;border:none;background:#fff;
+    font-size:calc(var(--b) * .46);box-shadow:0 3px 0 rgba(0,0,0,.15);cursor:pointer;padding:0;font-family:inherit}
   #stage.paused #scene-svg{filter:saturate(.6) brightness(.9)}
 
   .blink{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
@@ -103,6 +121,7 @@
 </style>
 </head>
 <body>
+<div class="wrap" id="wrap">
 <div class="stage" id="stage">
 <svg id="scene-svg" viewBox="0 0 900 1000" xmlns="http://www.w3.org/2000/svg">
   <defs id="defs">
@@ -142,10 +161,6 @@
 
 <div id="chips" class="chips"></div>
 <div id="bubble" class="bubble hidden"><span class="who" id="who"></span><span id="line"></span></div>
-<button id="muteBtn" aria-label="Sound on or off">🔊</button>
-<button id="homeBtn" aria-label="All episodes">🏠</button>
-<button id="pauseBtn" aria-label="Pause">⏸</button>
-<button id="skipBtn" aria-label="Next episode">⏭</button>
 <div id="paused" class="overlay hidden"><div class="card"><h2 style="color:#2F6FD6;font-size:8cqw;margin:.2em 0 .5em">Paused</h2><button id="resumeBtn" class="big">▶ Keep going</button><div><button class="small" id="pNextBtn">Next episode ⏭</button><button class="small" data-go="home">🏠 All episodes</button></div></div></div>
 
 <div id="start" class="overlay hidden">
@@ -178,15 +193,22 @@
   <div class="grid" id="grid"></div>
 </div>
 </div>
+<div id="ctrls" class="off">
+<button id="muteBtn" aria-label="Sound on or off">🔊</button>
+<button id="homeBtn" aria-label="All episodes">🏠</button>
+<button id="pauseBtn" aria-label="Pause">⏸</button>
+<button id="skipBtn" aria-label="Next episode">⏭</button>
+</div>
+</div>
 
-<script src="lines.js?v=1795480411"></script>
-<script src="scene1.js?v=1795480411"></script>
-<script src="engine.js?v=1795480411"></script>
-<script src="episodes.js?v=1795480411"></script>
-<script src="episodes2.js?v=1795480411"></script>
-<script src="episodes3.js?v=1795480411"></script>
-<script src="episodes4.js?v=1795480411"></script>
-<script src="episodes5.js?v=1795480411"></script>
+<script src="lines.js?v=1795495446"></script>
+<script src="scene1.js?v=1795495446"></script>
+<script src="engine.js?v=1795495446"></script>
+<script src="episodes.js?v=1795495446"></script>
+<script src="episodes2.js?v=1795495446"></script>
+<script src="episodes3.js?v=1795495446"></script>
+<script src="episodes4.js?v=1795495446"></script>
+<script src="episodes5.js?v=1795495446"></script>
 <script>Game.boot();</script>
 </body>
 </html>

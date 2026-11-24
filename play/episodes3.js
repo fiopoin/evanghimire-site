@@ -354,7 +354,7 @@
   const pluto = () => `<rect width="900" height="1000" fill="#05081A"/>` + stars(34, 140, 560) + `<circle cx="760" cy="140" r="8" fill="#FFF3C4"/>` +
     `<path d="M0 560 Q300 520 600 560 T900 540 V1000 H0Z" fill="#C9B9A2"/><path d="M0 640 Q300 610 600 640 T900 630 V1000 H0Z" fill="#B7A48A"/>` +
     `<path id="heart" d="M520 640 c-40 -60 -130 -10 -90 50 l90 80 l90 -80 c40 -60 -50 -110 -90 -50z" fill="#F2E6D6"/>` +
-    `<g id="radio" transform="translate(0,90)"><rect x="360" y="190" width="200" height="140" rx="16" fill="#1B2240" stroke="#9AA5B4" stroke-width="4"/><path d="M460 190 V140" stroke="#9AA5B4" stroke-width="5"/><circle cx="460" cy="134" r="8" fill="#E53935"/>${[0,1,2].map(i => `<rect id="bar${i}" x="${400+i*45}" y="${300-(i+1)*30}" width="30" height="${(i+1)*30}" rx="4" fill="#3E4A5C"/>`).join('')}</g>`;
+    `<g id="radio" transform="translate(0,130)"><rect x="360" y="190" width="200" height="140" rx="16" fill="#1B2240" stroke="#9AA5B4" stroke-width="4"/><path d="M460 190 V140" stroke="#9AA5B4" stroke-width="5"/><circle cx="460" cy="134" r="8" fill="#E53935"/>${[0,1,2].map(i => `<rect id="bar${i}" x="${400+i*45}" y="${300-(i+1)*30}" width="30" height="${(i+1)*30}" rx="4" fill="#3E4A5C"/>`).join('')}</g>`;
   EPISODES.push({ n:34, season:3, title:'Little Pluto', icon:'💜', setting:'Pluto',
     tip:'Pluto is a dwarf planet, far away and very cold, with a big heart shape on it.',
     scene: pluto,

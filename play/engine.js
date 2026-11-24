@@ -300,9 +300,11 @@
 
   /* ---------------- taps ---------------- */
   let pending = null, reprompt = null;
-  function clearHint(){ $('hint').style.display = 'none'; $('hintRings').innerHTML = ''; $('hintExtra').innerHTML = ''; $('hits').innerHTML = ''; }
+  function clearHint(){ window.__tgt = null; $('hint').style.display = 'none'; $('hintRings').innerHTML = ''; $('hintExtra').innerHTML = ''; $('hits').innerHTML = ''; }
   function ringFor(b){
-    return { cx:b.cx, cy:b.cy, rx:Math.max(b.w/2 + 12, 42), ry:Math.max(b.h/2 + 12, 40) };
+    let rx = Math.max(b.w/2 + 12, 42), ry = Math.max(b.h/2 + 12, 40);
+    rx = Math.max(30, Math.min(rx, b.cx - 6, 894 - b.cx)); ry = Math.max(30, Math.min(ry, b.cy - 6, 994 - b.cy));
+    return { cx:b.cx, cy:b.cy, rx, ry };
   }
   function showRing(b, withHand){
     const r = ringFor(b);
@@ -336,6 +338,7 @@
     return new Promise((res, rej) => {
       const b = targetBox(id);
       const r = showRing(b, true);
+      window.__tgt = [{ id, r, ok:true }];
       if(opts.arrow) $('hintExtra').innerHTML = opts.arrow;
       const done = () => { if(pending !== p) return; pending = null; clearInterval(reprompt); clearHint(); stopVoice(); res(); };
       const p = { done, rej }; pending = p;
@@ -355,9 +358,11 @@
     return new Promise(res => {
       let finished = false;
       const p = { done(){ }, rej(){ } }; pending = p;
+      window.__tgt = [];
       ids.forEach(id => {
         const b = targetBox(id);
         const r = showRing(b, id === correct && S.auto);
+        window.__tgt.push({ id, r, ok: id === correct });
         addHit(r, () => {
           if(finished) return;
           if(id === correct){
@@ -400,7 +405,8 @@
   }
 
   /* ---------------- flow ---------------- */
-  function show(id, on){ $(id).classList.toggle('hidden', !on); }
+  function syncCtrls(){ const off = S.auto || $('menu').style.display !== 'none' || !$('start').classList.contains('hidden') || !$('end').classList.contains('hidden'); $('ctrls').classList.toggle('off', off); }
+  function show(id, on){ $(id).classList.toggle('hidden', !on); syncCtrls(); }
   function resetStage(){
     setPaused(false); evanSuit(false);
     S.token++;
@@ -437,7 +443,7 @@
   function openEpisode(n, auto){
     const e = episode(n); if(!e){ goHome(); return; }
     resetStage();
-    S.ep = 'ep' + n; S.auto = !!auto; S.cur = e;
+    S.ep = 'ep' + n; S.auto = !!auto; S.cur = e; document.body.classList.toggle('auto', !!auto);
     $('muteBtn').style.display = $('homeBtn').style.display = $('pauseBtn').style.display = auto ? 'none' : '';
     const hasNext = !!episode(n + 1);
     $('skipBtn').style.display = (auto || !hasNext) ? 'none' : '';
@@ -463,7 +469,7 @@
       for(const k of (e.outro || ['a_super'])) await say(k);
       await wait(1400);
       $('tipText').textContent = e.tip;
-      $('grownText').textContent = e.grown || ''; $('grownBox').classList.toggle('hidden', !e.grown);
+      $('grownText').textContent = e.grown || ''; $('grownBox').classList.toggle('hidden', !e.grown); $('end').classList.toggle('hasGrown', !!e.grown);
       $('nextBtn').style.display = episode(e.n + 1) ? '' : 'none';
       show('end', true);
       try{ localStorage.setItem('ea_done_' + e.n, '1'); }catch(err){}
@@ -473,7 +479,7 @@
   }
   function goHome(){
     resetStage();
-    $('menu').style.display = '';
+    $('menu').style.display = ''; syncCtrls();
     const g = $('grid'); g.innerHTML = '';
     let lastSeason = 0;
     EPISODES.forEach(e => {
@@ -521,6 +527,7 @@
         ac();
         if(!pending) { if(h.dataset.k === 'aama'){ sfx.beep(); anim($('aamaSpin'), [{transform:'rotate(0)'},{transform:'rotate(-6deg)'},{transform:'rotate(6deg)'},{transform:'rotate(0)'}], {duration:500}); } else { tone(660,.1,'sine',.1); tone(880,.12,'sine',.1,.1); } }
       }));
+      setInterval(syncCtrls, 150);
       window.addEventListener('hashchange', route);
       route();
     }
