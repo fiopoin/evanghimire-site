@@ -481,7 +481,7 @@
       if(sn !== lastSeason){
         lastSeason = sn;
         const h = document.createElement('div'); h.className = 'season';
-        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : sn === 2 ? '<b>Season 2</b><span>The Trip to Nepal</span>' : sn === 3 ? '<b>Season 3</b><span>Mission to the Planets</span>' : '<b>Season 4</b><span>Frosty Moon: First Principles</span>';
+        h.innerHTML = sn === 1 ? '<b>Season 1</b><span>Fixing things at home</span>' : sn === 2 ? '<b>Season 2</b><span>The Trip to Nepal</span>' : sn === 3 ? '<b>Season 3</b><span>Mission to the Planets</span>' : sn === 4 ? '<b>Season 4</b><span>Frosty Moon: First Principles</span>' : '<b>Season 5</b><span>Big Ideas</span>';
         g.appendChild(h);
       }
       let done = false; try{ done = localStorage.getItem('ea_done_' + e.n) === '1'; }catch(err){}

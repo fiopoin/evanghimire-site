@@ -2968,5 +2968,665 @@ window.LINES={
 "aama",
 "Safety tip! Never look straight at the Sun, not even through glasses or a window."
 ]
+},
+"ep49": {
+"title": [
+"aama",
+"Evan and Aama! Season five, episode forty nine. The big ship's pull!"
+],
+"e_ship": [
+"evan",
+"Whoa! Look at that giant ship coming close to Frosty Moon!"
+],
+"a_pull": [
+"aama",
+"Glimmer warned us. That ship is so big, it is pulling on our little moon."
+],
+"s_why": [
+"shivu",
+"How can something pull without touching?"
+],
+"a_know": [
+"aama",
+"Good question. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"When I drop a ball, it falls down. Something pulls it, even though nobody touches it!"
+],
+"a_swing": [
+"aama",
+"That pull is called gravity. Tap the ball to swing it round on its string!"
+],
+"e_feel": [
+"evan",
+"The string pulls the ball in, so it goes round and round. Like a moon!"
+],
+"a_which": [
+"aama",
+"Big things pull harder when they are close. Which way should the ship go? Tap it!"
+],
+"s_phew": [
+"shivu",
+"The ship went far away. Frosty Moon is safe!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Bigger things pull harder, and gravity keeps a moon going round its planet."
+],
+"a_super": [
+"aama",
+"Super steering, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Swing toys only where nobody is standing close."
+]
+},
+"ep50": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty. The spinning top storm!"
+],
+"o_wobble": [
+"orion",
+"A big storm! The whole dome is wobbling!"
+],
+"a_core": [
+"aama",
+"The dome has a spinning core in the middle. It slowed down, so the dome wobbles."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"My spinning top stands up when it spins. When it stops, it falls over!"
+],
+"a_which": [
+"aama",
+"Which top stays standing? Tap it!"
+],
+"e_spin": [
+"evan",
+"The spinning one! Spinning things stay steady!"
+],
+"a_tapcore": [
+"aama",
+"Tap the core to make it spin faster!"
+],
+"o_steady": [
+"orion",
+"It's spinning so fast! The dome stopped wobbling!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Spinning things stay steady, like a top."
+],
+"a_super": [
+"aama",
+"Super spinning, Evan and Orion! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Stay inside during storms, and wait for a grown-up to say it is safe."
+]
+},
+"ep51": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty one. The shiny bowl!"
+],
+"a_hello": [
+"aama",
+"We need to send a light message to the big ship, so it knows we are here."
+],
+"k_spread": [
+"kestrel",
+"But the light goes everywhere! It doesn't reach the ship."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Shiny things bounce light. Like a mirror!"
+],
+"a_which": [
+"aama",
+"Which shape sends all the light to one place? Tap it!"
+],
+"a_shine": [
+"aama",
+"The panels make a shiny bowl now. Tap the bowl to shine!"
+],
+"k_beam": [
+"kestrel",
+"One big beam, straight to the ship!"
+],
+"e_turned": [
+"evan",
+"The ship saw it! It's turning away from our moon!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. A curved shiny bowl sends light to one spot, like a satellite dish."
+],
+"a_super": [
+"aama",
+"Super shining, Evan and Kestrel! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Never shine a flashlight or any light into someone's eyes."
+]
+},
+"ep52": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty two. The lucky door!"
+],
+"s_locked": [
+"shivu",
+"The Seed Vault door is locked. It has a picture of a six on it."
+],
+"a_six": [
+"aama",
+"This old door opens when we roll a six. But a die has six sides."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"A six is just one side out of six. So it's hard to get. But if I keep trying, it can happen!"
+],
+"a_roll": [
+"aama",
+"Tap the die to roll it!"
+],
+"a_again": [
+"aama",
+"Roll again!"
+],
+"t1": [
+"shivu",
+"Two. Not yet. That's one try."
+],
+"t2": [
+"shivu",
+"Four. Two tries."
+],
+"t3": [
+"shivu",
+"One. Three tries. Keep going!"
+],
+"e_six": [
+"evan",
+"Six! On the fourth try!"
+],
+"s_open": [
+"shivu",
+"The door is opening! We kept trying and it worked."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Some things are unlikely, but if you try enough times, they can happen."
+],
+"a_super": [
+"aama",
+"Super rolling, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Take turns when you play games, and cheer for each other."
+]
+},
+"ep53": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty three. Magnet brakes!"
+],
+"o_falling": [
+"orion",
+"The metal ceiling is sliding down! The seeds are under it!"
+],
+"a_know": [
+"aama",
+"We need to slow it down. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Magnets pull on metal. A magnet could hold it back!"
+],
+"a_coil": [
+"aama",
+"We can make a magnet with wire, a nail and a battery."
+],
+"a_wrap": [
+"aama",
+"Tap the nail to wrap the wire around it!"
+],
+"a_battery": [
+"aama",
+"Now tap the battery to connect it!"
+],
+"e_magnet": [
+"evan",
+"It's a magnet now! I can see it pulling!"
+],
+"o_slow": [
+"orion",
+"The ceiling is going so slowly now!"
+],
+"a_grab": [
+"aama",
+"Quick, tap the seed box to grab it!"
+],
+"e_got": [
+"evan",
+"Got it! The seeds are safe!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Wire wrapped round and round with power makes a magnet."
+],
+"a_super": [
+"aama",
+"Super braking, Evan and Orion! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Keep magnets and button batteries away from little mouths. If one is swallowed, tell a grown-up right away."
+]
+},
+"ep54": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty four. Sleepy seeds!"
+],
+"k_box": [
+"kestrel",
+"Evan, the seeds from the vault are so tiny. Are they alive?"
+],
+"e_sleep": [
+"evan",
+"I think they're sleeping!"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Seeds grow into plants. But they wait until it's time."
+],
+"a_where": [
+"aama",
+"Seeds sleep best somewhere cold and dry. Where should we keep them? Tap it!"
+],
+"k_fridge": [
+"kestrel",
+"In the cold, dry box! Sleep tight, seeds!"
+],
+"a_wake": [
+"aama",
+"To wake one seed up, it needs water and warmth."
+],
+"a_water": [
+"aama",
+"Tap the cup to give the seed some water!"
+],
+"e_woke": [
+"evan",
+"It woke up! It's a baby plant!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Seeds can sleep a long time in the cold, and wake up with water and warmth."
+],
+"a_super": [
+"aama",
+"Super gardening, Evan and Kestrel! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Wash your hands after gardening, and never eat seeds or plants unless a grown-up says they are food."
+]
+},
+"ep55": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty five. Lemon light!"
+],
+"s_lemon": [
+"shivu",
+"Evan, did you know a lemon can make electricity?"
+],
+"e_how": [
+"evan",
+"A lemon? No way! How?"
+],
+"a_know": [
+"aama",
+"Let's find out. What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Lemons are juicy and sour. And batteries make a light turn on."
+],
+"a_metals": [
+"aama",
+"Each lemon has a silver nail and a copper coin. Two different metals in sour juice make a tiny bit of electricity."
+],
+"a_link": [
+"aama",
+"Tap each lemon to join it with a wire!"
+],
+"e_light": [
+"evan",
+"The little light is on! Lemon power!"
+],
+"s_four": [
+"shivu",
+"One lemon is too weak. Four lemons together are strong enough."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Fruit and two different metals can make a tiny bit of electricity."
+],
+"a_super": [
+"aama",
+"Super science, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Kids use only tiny batteries for science. Never play with wall sockets or plugs."
+]
+},
+"ep56": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty six. Trees that clean the air!"
+],
+"o_grey": [
+"orion",
+"This hill is so grey. Even the sky is grey."
+],
+"e_cough": [
+"evan",
+"The air feels smoky. Aama, can we help?"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"Green plants take in air and make fresh air. Trees are giant plants!"
+],
+"a_plant": [
+"aama",
+"Tap the soil to plant a tree!"
+],
+"o_blue": [
+"orion",
+"The sky is turning blue!"
+],
+"e_breathe": [
+"evan",
+"Ahh. The air smells fresh!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Trees breathe in the gas we breathe out, and keep it in their wood."
+],
+"a_super": [
+"aama",
+"Super planting, Evan and Orion! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Plant with a grown-up, and wear gloves when you dig."
+]
+},
+"ep57": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty seven. Faster than a rocket?"
+],
+"e_far": [
+"evan",
+"Aama, the middle of the galaxy is so far away. What's the fastest thing there is?"
+],
+"a_race": [
+"aama",
+"Let's have a race. A rocket, a plane and a beam of light!"
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"When I switch on the light, the room lights up right away. Light is super fast!"
+],
+"a_guess": [
+"aama",
+"Who will win the race? Tap your guess!"
+],
+"s_go": [
+"shivu",
+"Ready, set, go!"
+],
+"e_light": [
+"evan",
+"The light won! It was there before the rocket even moved!"
+],
+"a_sun": [
+"aama",
+"Light is the fastest thing there is. Even so, sunlight takes eight minutes to reach Earth. Space is very, very big."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Light is the fastest thing in the universe, and space is very, very big."
+],
+"a_super": [
+"aama",
+"Super racing, Evan and Shivu! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Never look at a laser pointer, and never point one at people, pets or planes."
+]
+},
+"ep58": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty eight. The black hole drain!"
+],
+"k_what": [
+"kestrel",
+"What's that dark circle with the glowing ring?"
+],
+"a_bh": [
+"aama",
+"That is a black hole. It pulls so hard that even light can't get out."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"When I pull the plug in the bath, the water swirls down the drain!"
+],
+"a_plug": [
+"aama",
+"Let's see. Tap the bath to pull the plug!"
+],
+"k_swirl": [
+"kestrel",
+"The leaves swirled round and round and went down!"
+],
+"a_which": [
+"aama",
+"A black hole is like a giant drain. Which way should we fly? Tap it!"
+],
+"e_safe": [
+"evan",
+"Far away! We can see it, but it can't pull us in."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Some things pull so hard even light falls in, so we stay far away."
+],
+"a_super": [
+"aama",
+"Super flying, Evan and Kestrel! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! A grown-up should always be nearby whenever there is bath water."
+]
+},
+"ep59": {
+"title": [
+"aama",
+"Evan and Aama! Episode fifty nine. Is one plus one still two?"
+],
+"o_wrong": [
+"orion",
+"The counting machine says one plus one is three!"
+],
+"e_two": [
+"evan",
+"That's silly. One plus one is two. I know that for sure!"
+],
+"a_know": [
+"aama",
+"Yes. So what else do we know for sure?"
+],
+"e_truth": [
+"evan",
+"The answer is wrong, so one part of the machine is broken."
+],
+"a_parts": [
+"aama",
+"Let's check each part, one at a time."
+],
+"a_check1": [
+"aama",
+"Tap the IN part to check it."
+],
+"e_ok1": [
+"evan",
+"One and one went in. That part is fine."
+],
+"a_check2": [
+"aama",
+"Now tap the OUT part."
+],
+"e_ok2": [
+"evan",
+"It shows what it's told. That part is fine too."
+],
+"a_check3": [
+"aama",
+"Last one. Tap the gear part."
+],
+"o_sock": [
+"orion",
+"There's a sock stuck in the gears! How did that get there?"
+],
+"e_fixed": [
+"evan",
+"One plus one is two again!"
+],
+"a_truth": [
+"aama",
+"Remember, Evan. When an answer looks wrong, check each part until you find the jam."
+],
+"a_super": [
+"aama",
+"Super checking, Evan and Orion! And you too! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Machines get switched off and unplugged before anyone looks inside. That's a grown-up job."
+]
+},
+"ep60": {
+"title": [
+"aama",
+"Evan and Aama! Episode sixty. Clean up time!"
+],
+"s_slow": [
+"shivu",
+"The outpost computer is so slow. Everything is stuck!"
+],
+"a_full": [
+"aama",
+"Its memory boxes are full of old junk that nobody uses anymore."
+],
+"a_know": [
+"aama",
+"What do we know for sure?"
+],
+"e_truth": [
+"evan",
+"When my room is full of toys I'm not using, I can't find space to play!"
+],
+"a_tidy": [
+"aama",
+"Tap the junk boxes to tidy them away!"
+],
+"s_room": [
+"shivu",
+"Lots of room now! The computer is fast again."
+],
+"a_code": [
+"aama",
+"Now we can send a secret code to Mom. Star, heart, moon means I love you."
+],
+"a_send": [
+"aama",
+"Tap the secret code to send it!"
+],
+"d_love": [
+"dallu",
+"I got your secret code! I love you too, my clever engineer."
+],
+"a_restart": [
+"aama",
+"Last step. Let's restart the whole outpost!"
+],
+"a_tapme": [
+"aama",
+"Tap me, Evan, to press the restart button."
+],
+"e_stars": [
+"evan",
+"The algae tanks are bright green, and look at the stars! They're all lined up in rows!"
+],
+"s_engineer": [
+"shivu",
+"You fixed the whole outpost, Evan. You're a real engineer."
+],
+"a_truth": [
+"aama",
+"Remember, Evan. Put away what you're not using, and always ask, what do we know for sure?"
+],
+"a_super": [
+"aama",
+"Super cleaning, Evan and Shivu! You fixed Frosty Moon from top to bottom! Beep boop!"
+],
+"a_tip": [
+"aama",
+"Safety tip! Keep passwords secret, and share them only with your grown-up."
+]
 }
 };

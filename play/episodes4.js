@@ -536,5 +536,6 @@
       await E.say('a_truth');
     }
   });
+  window.S4H = { moveTo, hide, show, fill, swap, txt, stars, sky, tray, slot, three, two, screen, room, ice, glimmer, glow, crew, bubbles, style, domeIn };
   EPISODES.filter(e => e.season === 4).forEach(e => { const prev = e.setup; e.setup = E => { E.evanSuit(true); E.evanSet(275, 955); if(prev) prev(E); }; });
 })();
