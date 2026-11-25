@@ -163,14 +163,16 @@
     const [e, [who, text]] = found;
     setBubble(who, text);
     stopVoice();
-    Object.keys(PEOPLE).forEach(k => talking(k, false)); talking(who, true);
+    Object.keys(PEOPLE).forEach(k => talking(k, false)); talking(who, true); setTalker(who);
     return new Promise(res => {
       let done = false, tm;
-      const fin = () => { if(done) return; done = true; clearTimeout(tm); talking(who, false); setTimeout(res, 250); };
+      const fin = () => { if(done) return; done = true; clearTimeout(tm); talking(who, false); setTalker(null); setTimeout(res, 250); };
       const readMs = text.length * 58 + 1200;
       const buf = S.buffers[e + '/' + key], a = S.ac;
       if(!S.muted && buf && a){
         const s = a.createBufferSource(); s.buffer = buf; s.connect(a.destination);
+        if(!analyser){ analyser = a.createAnalyser(); analyser.fftSize = 512; abuf = new Uint8Array(analyser.fftSize); }
+        s.connect(analyser);
         s.onended = fin; curSrc = s; s.start();
         tm = setTimeout(fin, buf.duration * 1000 + 900);
         if(window.__onSay) window.__onSay(e + '/' + key);
@@ -234,8 +236,56 @@
     const im = $('evanImg');
     if(on){ im.setAttribute('href','evan_space.webp'); im.setAttribute('x',-97); im.setAttribute('width',194); im.setAttribute('y',-430); im.setAttribute('height',430); }
     else { im.setAttribute('href','evan.webp'); im.setAttribute('x',-172); im.setAttribute('width',344); im.setAttribute('y',-430); im.setAttribute('height',430); }
+    rigEvan();
   }
   function evanHide(h){ $('evanPos').style.display = h ? 'none' : ''; }
+
+  /* ---------- face rig: talking jaw, blinking eyes, breathing ---------- */
+  const RIGS = {};
+  function skinOf(src){ return '#C89A7A'; }
+  function buildRig(parent, key, src, x0, y0, w, h, flip){
+    const F = (window.FACES || {})[src];
+    const old = parent.querySelector('.rig'); if(old) old.remove();
+    if(!F){ delete RIGS[key]; return; }
+    const s = w / F.w, [fx, fy, fw, fh] = F.face.map(v => v * s);
+    const X = v => flip ? -(x0 + v) - 0 : x0 + v;
+    const cx = x0 + fx + fw/2, my = y0 + fy + fh*.78, ey = y0 + fy + fh*.43;
+    const g = el('g', { class:'rig', 'pointer-events':'none' }, parent);
+    const id = 'jc_' + key.replace(/\W/g,'');
+    const jawTop = my - fh*.02, jawBot = y0 + fy + fh*1.08;
+    const lid = (p) => { const ex = x0 + fx + fw*p, rx = fw*.115, ry = fh*.06;
+      return '<ellipse cx="' + ex + '" cy="' + ey + '" rx="' + rx + '" ry="' + ry + '" fill="' + (F.skin || '#B98563') + '"/>' +
+        '<path d="M' + (ex - rx) + ' ' + (ey + ry*.2) + ' Q' + ex + ' ' + (ey + ry*1.1) + ' ' + (ex + rx) + ' ' + (ey + ry*.2) + '" stroke="#5A3D2B" stroke-width="' + (fh*.014) + '" fill="none" stroke-linecap="round"/>'; };
+    g.innerHTML =
+      '<defs><radialGradient id="' + id + 'g"><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>' +
+      '<mask id="' + id + '" maskUnits="userSpaceOnUse"><ellipse cx="' + cx + '" cy="' + ((jawTop + jawBot)/2) + '" rx="' + (fw*.26) + '" ry="' + ((jawBot - jawTop)/2) + '" fill="url(#' + id + 'g)"/></mask></defs>' +
+      '<g mask="url(#' + id + ')"><image class="jaw" href="' + parent.querySelector('image').getAttribute('href') + '" x="' + x0 + '" y="' + y0 + '" width="' + w + '" height="' + h + '"/></g>' +
+      '<g class="lids" style="opacity:0">' + lid(.31) + lid(.69) + '</g>';
+    RIGS[key] = { g, my: jawTop, jh: jawBot - jawTop, jaw: g.querySelector('.jaw'), lids: g.querySelector('.lids'), fh, open: 0, next: performance.now() + 1500 + Math.random()*3000 };
+  }
+  let talker = null, analyser = null, abuf = null;
+  function setTalker(who){ talker = who; }
+  function rigLoop(now){
+    let amp = 0;
+    if(talker && analyser){ analyser.getByteTimeDomainData(abuf); let m = 0; for(let i = 0; i < abuf.length; i += 4){ const d = Math.abs(abuf[i] - 128); if(d > m) m = d; } amp = Math.min(1, m / 60); }
+    else if(talker) amp = .5 + .5 * Math.sin(now / 70);
+    for(const k in RIGS){
+      const r = RIGS[k]; if(!r.g.isConnected){ delete RIGS[k]; continue; }
+      const target = window.__rigForce ? window.__rigForce.open : (k === talker ? amp : 0);
+      r.open += (target - r.open) * .45;
+      const d = r.open * r.fh * .085;
+      const k2 = 1 + d / r.jh; r.jaw.setAttribute('transform', 'translate(0 ' + (r.my * (1 - k2)).toFixed(2) + ') scale(1 ' + k2.toFixed(4) + ')');
+      if(window.__rigForce){ r.lids.style.opacity = window.__rigForce.blink ? 1 : 0; continue; }
+      if(false && now > r.next){ r.lids.style.opacity = 1; r.blinkEnd = now + 120; r.next = now + 2500 + Math.random()*3500; }
+      if(r.blinkEnd && now > r.blinkEnd){ r.lids.style.opacity = 0; r.blinkEnd = 0; }
+    }
+    requestAnimationFrame(rigLoop);
+  }
+  requestAnimationFrame(rigLoop);
+  function rigEvan(){
+    const im = $('evanImg'), src = im.getAttribute('href').replace('.webp','');
+    buildRig($('evanWalk'), 'evan', src, +im.getAttribute('x'), +im.getAttribute('y'), +im.getAttribute('width'), +im.getAttribute('height'));
+  }
 
   const PEOPLE = {};
   function person(k, x, y, opts){
@@ -245,9 +295,10 @@
     const h = Math.round((HEIGHT[im] || 500) * (opts.scale || 1)), w = Math.round(h * (RATIO[im] || .35));
     if(!p){
       const g = el('g', { id:'p_' + k, class:'person' }, $('people'));
-      g.innerHTML = '<g class="pwalk"><g class="ptalk"><ellipse cx="0" cy="0" rx="' + (w*.42) + '" ry="10" fill="#000" opacity=".13"/>' +
-        '<image href="cast/' + im + '.webp" x="' + (-w/2) + '" y="' + (-h) + '" width="' + w + '" height="' + h + '" filter="url(#shadowF)"' + (opts.flip ? ' transform="scale(-1 1)"' : '') + '/></g></g>';
+      g.innerHTML = '<g class="pwalk"><g class="ptalk"><ellipse cx="0" cy="0" rx="' + (w*.42) + '" ry="10" fill="#000" opacity=".13"/><g class="pbreath" style="animation-delay:-' + (Math.random()*3).toFixed(2) + 's"><g class="pimg"' + (opts.flip ? ' transform="scale(-1 1)"' : '') + '>' +
+        '<image href="cast/' + im + '.webp" x="' + (-w/2) + '" y="' + (-h) + '" width="' + w + '" height="' + h + '" filter="url(#shadowF)"/></g></g></g></g>';
       p = PEOPLE[k] = { g, x, y, h, w };
+      buildRig(g.querySelector('.pimg'), k, im, -w/2, -h, w, h);
     }
     p.g.style.transition = 'none'; p.g.style.transform = 'translate(' + x + 'px,' + y + 'px)'; p.g.style.display = ''; p.g.style.opacity = 1;
     p.x = x; p.y = y;
@@ -512,6 +563,7 @@
   window.Game = {
     API,
     boot(){
+      rigEvan();
       $('playBtn').onclick = () => { ac(); try{ const a = S.ac, b = a.createBuffer(1,1,22050), s = a.createBufferSource(); s.buffer = b; s.connect(a.destination); s.start(); }catch(e){} begin(); };
       $('againBtn').onclick = () => { ac(); openEpisode(S.cur.n); begin(); };
       $('nextBtn').onclick = () => { location.hash = 'ep-' + (S.cur.n + 1); };

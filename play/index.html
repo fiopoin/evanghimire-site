@@ -16,6 +16,8 @@
   #ctrls{display:flex;flex-direction:row;gap:14px;align-items:center;justify-content:center;height:calc(var(--b) + 6px)}
   #ctrls.off{visibility:hidden}
   body.auto #ctrls{display:none}
+  body.auto #scene-svg{transform-origin:50% 60%;animation:cam 16s ease-in-out infinite alternate}
+  @keyframes cam{0%{transform:scale(1)}50%{transform:scale(1.035) translate(-.6%,.4%)}100%{transform:scale(1.02) translate(.6%,.2%)}}
   body.auto .stage{width:min(100vw,90vh)!important}
   @media (min-aspect-ratio:1/1){
     .wrap{flex-direction:row}
@@ -76,6 +78,8 @@
   .season{grid-column:1/-1;display:flex;align-items:baseline;gap:2cqw;margin:2cqw 0 0;padding-bottom:1cqw;border-bottom:.5cqw solid #E9DFC9}
   .season b{font-size:6cqw;color:#2F6FD6}.season span{font-size:3.8cqw;color:#5A6B82;font-weight:600}
   .ptalk{transform-box:fill-box;transform-origin:50% 100%}
+  .pbreath{transform-box:fill-box;transform-origin:50% 100%;animation:breathe 3.2s ease-in-out infinite}
+  @keyframes breathe{50%{transform:scale(1.006,1.014)}}
   .ptalk.talk{animation:talk .55s ease-in-out infinite alternate}
   @keyframes talk{to{transform:translateY(-6px) scaleY(1.01)}}
   .pwalk.walking{animation:step .32s ease-in-out infinite alternate}
@@ -201,15 +205,16 @@
 </div>
 </div>
 
-<script src="lines.js?v=1795557599"></script>
-<script src="scene1.js?v=1795557599"></script>
-<script src="engine.js?v=1795557599"></script>
-<script src="episodes.js?v=1795557599"></script>
-<script src="episodes2.js?v=1795557599"></script>
-<script src="episodes3.js?v=1795557599"></script>
-<script src="episodes4.js?v=1795557599"></script>
-<script src="episodes5.js?v=1795557599"></script>
-<script src="episodes6.js?v=1795557599"></script>
+<script src="lines.js?v=1795574429"></script>
+<script src="scene1.js?v=1795574429"></script>
+<script src="faces.js?v=1795574429"></script>
+<script src="engine.js?v=1795574429"></script>
+<script src="episodes.js?v=1795574429"></script>
+<script src="episodes2.js?v=1795574429"></script>
+<script src="episodes3.js?v=1795574429"></script>
+<script src="episodes4.js?v=1795574429"></script>
+<script src="episodes5.js?v=1795574429"></script>
+<script src="episodes6.js?v=1795574429"></script>
 <script>Game.boot();</script>
 </body>
 </html>
